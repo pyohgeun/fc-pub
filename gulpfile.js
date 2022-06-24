@@ -1,6 +1,14 @@
 const { series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const connect = require('gulp-connect');
+const fs = require('fs');
+function sitemap(done){
+    const sitemap = fs.readFile('./index.html', 'utf8', (err, data) => {
+        console.log(data);
+    });
+    done();
+    return sitemap
+}
 function scss(done){
     return src('./src/scss/*.scss')
     .pipe(sass())
@@ -25,5 +33,5 @@ function build(done){
     
     done();
 }
-
+exports.sitemap = sitemap;
 exports.default = series(scss, build, serve);

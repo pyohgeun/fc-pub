@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/pyohgeun/fc-pub#readme",
   "dependencies": {
+    "express": "^4.18.1",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-livereload": "^4.0.2",
