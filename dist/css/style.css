@@ -2030,6 +2030,16 @@ html, body, input, select {
   background-image: url("../image/icon_input_delete.png");
 }
 
+.bottom-fix {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.875rem;
+}
+
 .button {
   border: 0;
   background-color: #F0F0F0;
@@ -2298,7 +2308,39 @@ html, body, input, select {
   height: 6.25rem;
 }
 
-.onboad .container {
+.onboad .splash {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.onboad .splash.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #3D73FF;
+}
+.onboad .splash .container {
+  text-align: center;
+  color: #ffffff;
+  text-align: center;
+  animation-duration: 1.5s;
+  animation-name: splash;
+}
+.onboad .splash .container .logo {
+  margin: auto;
+  width: 10.5rem;
+}
+.onboad .splash .container .logo img {
+  width: 100%;
+}
+.onboad .splash .container .catch-phrase {
+  font-size: 0.875rem;
+}
+.onboad .entrance {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -2307,26 +2349,30 @@ html, body, input, select {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 2s;
+  background-color: #ffffff;
+}
+.onboad .entrance.active {
+  opacity: 1;
+}
+.onboad .entrance .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.875rem;
   text-align: center;
-  background-color: #3D73FF;
-  color: #ffffff;
 }
-.onboad .splash {
-  text-align: center;
-  animation-duration: 1.5s;
-  animation-name: splash;
-}
-.onboad .splash .logo {
-  margin: auto;
-  width: 10.5rem;
-}
-.onboad .splash .logo img {
-  width: 100%;
-}
-.onboad .splash .catch-phrase {
+.onboad .entrance .container .sub-text {
   font-size: 0.875rem;
+  color: #8C8C8C;
+}
+.onboad .entrance .container .main-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.onboad .entrance .container .onboard-img-wrap img {
+  width: 100%;
 }
 
 @keyframes splash {

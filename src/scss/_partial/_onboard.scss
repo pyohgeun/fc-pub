@@ -1,26 +1,60 @@
 .onboad{
-    .container{
-        @include fullpage;
-        @include metropolis;
-        height: 100vh;
-        width: 100vw;
-        text-align: center;
-        background-color: $fincube70;
-        color: #ffffff;
-    }
     .splash{
-        text-align: center;
-        animation-duration: 1.5s;
-        animation-name: splash;
-        .logo{
-            margin: auto;
-            width: rem(168);
-            img{
-                width: 100%;
+        @include fullpage;
+        &.active{
+            @include metropolis;
+            height: 100vh;
+            width: 100vw;
+            background-color: $fincube70;
+        }
+        .container{
+            text-align: center;
+            color: #ffffff;
+            text-align: center;
+            animation-duration: 1.5s;
+            animation-name: splash;
+            .logo{
+                margin: auto;
+                width: rem(168);
+                img{
+                    width: 100%;
+                }
+            }
+            .catch-phrase{
+                font-size: rem(14);
             }
         }
-        .catch-phrase{
-            font-size: rem(14);
+    }
+    .entrance{
+        @include fullpage;
+        @include metropolis;
+        opacity: 0;
+        // z-index: -1;
+        transition: opacity 1s;
+        transition-delay: 2s;
+        background-color: #ffffff;
+        &.active{
+            opacity: 1;
+            // z-index: 0;
+        }
+        .container{
+            padding-left: $container-pad;
+            padding-right: $container-pad;
+            padding-bottom: rem(30);
+            text-align: center;
+            .sub-text{
+                font-size: rem(14);
+                color: $fc-gray50;
+            }
+            .main-text{
+                font-size: rem(24);
+                font-weight: 700;
+            }
+            .onboard-img-wrap{
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
 }
