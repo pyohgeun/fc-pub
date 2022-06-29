@@ -1,5 +1,6 @@
 const { series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const babel = require('gulp-babel');
 const connect = require('gulp-connect');
 const fs = require('fs');
 function sitemap(done){
@@ -8,6 +9,14 @@ function sitemap(done){
     });
     done();
     return sitemap
+}
+function js(done){
+    return src('./src/js/*.js')
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
+    .pipe(dest('./dist/js'))
+    .pipe(connect.reload());
 }
 function scss(done){
     return src('./src/scss/*.scss')
@@ -29,9 +38,10 @@ function serve(){
 function build(done){
     
     watch('./src/scss/**/*.scss', scss);
+    watch('./src/js/*.js', js);
     watch('./**/*.html', html);
     
     done();
 }
 exports.sitemap = sitemap;
-exports.default = series(scss, build, serve);
+exports.default = series(scss, js, build, serve);

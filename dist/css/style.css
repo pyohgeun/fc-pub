@@ -2020,6 +2020,7 @@ html, body, input, select {
 }
 
 [class*=icon-] {
+  display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
   font-size: 0;
@@ -2028,6 +2029,12 @@ html, body, input, select {
 
 .icon-input-delete {
   background-image: url("../image/icon_input_delete.png");
+}
+
+.icon-close-popup-black {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../image/icon_close_popup_black.png");
 }
 
 .bottom-fix {
@@ -2047,6 +2054,9 @@ html, body, input, select {
   font-size: 1rem;
   border-radius: 0.3125rem;
   color: #373A44;
+}
+.button > img {
+  pointer-events: none;
 }
 .button.button-primary {
   background-color: #156BFF;
@@ -2098,7 +2108,7 @@ html, body, input, select {
 .input-wrapper.on-focus .input-border .input-text {
   background-color: #EAF2FF;
 }
-.input-wrapper.on-focus .input-step {
+.input-wrapper.on-focus .input-line {
   border-bottom: 2px solid #6993FF;
 }
 .input-wrapper .input-border {
@@ -2128,33 +2138,88 @@ html, body, input, select {
   font-size: 0.75rem;
   color: #6D768D;
 }
-.input-wrapper .input-step {
+.input-wrapper .input-line {
   position: relative;
   border-bottom: 2px solid #BDC2CD;
   padding-bottom: 0.625rem;
+  margin-top: 0.625rem;
   height: 2.0625rem;
 }
-.input-wrapper .input-step .input-text {
+.input-wrapper .input-line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #156BFF;
+  transition: width 0.2s;
+}
+.input-wrapper .input-line .input-text {
   width: 100%;
   height: 100%;
   padding: 0.75rem 0.625rem 0.75rem 0;
   vertical-align: middle;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #373A44;
 }
-.input-wrapper .input-step .input-text::placeholder {
+.input-wrapper .input-line .input-text::placeholder {
   color: #A2A9BA;
 }
-.input-wrapper .input-step .input-text:focus {
+.input-wrapper .input-line .input-text:focus {
   outline: none;
 }
-.input-wrapper .input-step > button.btn-input-reset {
+.input-wrapper .input-line > .btn-input-reset {
   position: absolute;
-  display: inline-block;
+  display: none;
   right: 0;
   top: 0;
   width: 1.25rem;
   height: 1.25rem;
+}
+.input-wrapper .input-line > .btn-input-reset img {
+  width: 100%;
+}
+.input-wrapper .input-line.is-value-in .btn-input-reset {
+  display: inline-block;
+}
+.input-wrapper .input-line.focused:after {
+  width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 1.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .prefix {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header .suffix {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .main {
@@ -2384,4 +2449,8 @@ html, body, input, select {
     transform: translate(0, 0);
     opacity: 1;
   }
+}
+.register .container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }

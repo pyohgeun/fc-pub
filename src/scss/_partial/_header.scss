@@ -1,5 +1,12 @@
 .header{
+    display: flex;
+    align-items: center;
     width: 100%;
     min-height: rem(30);
+    padding-left: $container-pad;
+    padding-right: $container-pad;
+    height: $header-height;
+    @include prefix-suffix;
+    justify-content: space-between;
     // background-color: $primary;
 }

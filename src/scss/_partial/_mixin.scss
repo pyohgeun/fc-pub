@@ -12,12 +12,7 @@
         justify-content: flex-end;
     }
 }
-@mixin icons{
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-size: 0;
-    line-height: 1;
-}
+
 @mixin fullpage{
     position: fixed;
     top: 0;

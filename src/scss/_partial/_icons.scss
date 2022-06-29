@@ -1,6 +1,15 @@
 [class*="icon-"]{
-    @include icons;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    line-height: 1;
 }
 .icon-input-delete{
     background-image: url('../image/icon_input_delete.png');
+}
+.icon-close-popup-black{
+    width: rem(24);
+    height: rem(24);
+    background-image: url('../image/icon_close_popup_black.png');
 }

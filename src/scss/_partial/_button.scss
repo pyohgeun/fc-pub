@@ -14,6 +14,9 @@
     font-size: rem(16);
     border-radius: rem(5);
     color: $fc-default;
+    >img{
+        pointer-events: none;
+    }
     &.button-primary{
         background-color: $btn-bg-primary;
         color: #ffffff;
