@@ -1,0 +1,16 @@
+
+.auction-list{
+    .container{
+        padding-left: $container-pad;
+        padding-right: $container-pad;
+        ul{
+            li{
+                text-align: left;
+                padding:rem(10);
+                border: 1px solid #eee;
+                margin-bottom: rem(5);
+                font-size: rem(14);
+            }
+        }
+    }
+}

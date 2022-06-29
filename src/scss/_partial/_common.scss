@@ -1,0 +1,42 @@
+@for $i from 1 to 50 {
+    .mt-#{$i*2}{
+        margin-top: rem($i*2);   
+    }
+    .mb-#{$i*2}{
+        margin-bottom: rem($i*2);   
+    }
+    .mr-#{$i*2}{
+        margin-right: rem($i*2);   
+    }
+    .ml-#{$i*2}{
+        margin-left: rem($i*2);   
+    }
+    .pt-#{$i*2}{
+        padding-top: rem($i*2);   
+    }
+    .pb-#{$i*2}{
+        padding-bottom: rem($i*2);   
+    }
+    .pr-#{$i*2}{
+        padding-right: rem($i*2);   
+    }
+    .pl-#{$i*2}{
+        padding-left: rem($i*2);   
+    }
+    .fs-#{$i}{
+        font-size: rem($i);   
+    }
+    .lh-#{$i}{
+        line-height: rem($i);   
+    }
+    
+}
+.fc-default{
+    color: $fc-default;
+}
+.fc-primary{
+    color: $fc-primary;
+}
+.fw-bold{
+    font-weight: 700;
+}

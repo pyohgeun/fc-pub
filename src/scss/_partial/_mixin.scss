@@ -1,0 +1,20 @@
+@mixin prefix-suffix{
+    display: flex;
+    align-items: center;
+    .prefix{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .suffix{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+@mixin icons{
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    line-height: 1;
+}

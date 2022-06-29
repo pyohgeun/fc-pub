@@ -1,0 +1,145 @@
+
+.main{
+    min-height: 100vh;
+    background-color: $bg-bluegray5;
+    .header{
+        @include prefix-suffix;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: rem(32);
+        padding-left: $container-pad;
+        padding-right: $container-pad;
+        // background-color: red;
+        .prefix{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        h1{
+            font-size: rem(24);
+            font-weight: 700;
+            color: $fc-default;
+        }
+        .info-text{
+            font-size: rem(12);
+            color: $fc-bluegray50;
+        }
+        .button{
+            margin-left: rem(20);
+            img{
+                width: rem(24);
+            }
+        }
+    }
+    .container{
+        padding-left: $container-pad;
+        padding-right: $container-pad;
+        .my-taxbill-info{
+            img{
+                width: 100%;
+            }
+            .sub-text{
+                margin-top: rem(14);
+                font-size: rem(14);
+                line-height: rem(18);
+                color: $fc-bluegray50;
+            }
+        }
+        h2{
+            font-size: rem(17);
+            font-weight: 700;
+        }
+        .card-title{
+            text-align: left;
+            font-size: rem(18);
+            line-height: rem(23);
+            font-weight: 700;
+        }
+        .my-bill-list{
+            display: flex;
+            justify-content: space-between;
+            .sub-text{
+                margin-top: 0;
+                margin-bottom: rem(5);
+                font-size: rem(13);
+                line-height: rem(16);
+                color: $fc-bluegray50;
+            }
+            .left-side{
+                display: flex;
+                flex: 1 0 70%;
+                img{
+                    width: rem(48);
+                    height: rem(48);
+                    margin-right: rem(6); 
+                }
+                .text-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    h2{
+                       margin-top: 0; 
+                       margin-bottom: 0; 
+                    }
+                }
+            }
+            .right-side{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        .my-cash-receipt-list{
+            display: flex;
+            justify-content: space-between;
+            .sub-text{
+                margin-top: 0;
+                margin-bottom: rem(5);
+                font-size: rem(13);
+                line-height: rem(16);
+                color: $fc-bluegray50;
+            }
+            .left-side{
+                display: flex;
+                flex: 1 0 70%;
+                img{
+                    width: rem(48);
+                    height: rem(48);
+                    margin-right: rem(6); 
+                }
+                .text-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    h2{
+                       margin-top: 0; 
+                       margin-bottom: 0; 
+                    }
+                }
+            }
+            .right-side{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        .my-tax{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left-side{
+                text-align: left;
+                >span{
+                    display: inline-block;
+                }
+            }
+            .right-side{
+                img{
+                    width: rem(100);
+                    height: rem(100);
+                }
+            }
+        }
+    }
+}

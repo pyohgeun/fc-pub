@@ -1,0 +1,27 @@
+// colors
+$primary: #156BFF;
+$primary-light: #EAF2FF;
+$bluegray5: #F3F4F6;
+
+$fc-default: #373A44;
+$fc-gray50: #8C8C8C;
+$fc-bluegray50: #6D768D;
+$fc-primary: $primary;
+$bg-bluegray5:$bluegray5;
+
+
+// layout
+$breakpoint-pad: 800px;
+$breakpoint-sm: 375px;
+$container-pad: rem(16);
+
+//button
+$btn-bg-default: #F0F0F0;
+$btn-bg-primary: $primary;
+$btn-bg-secondary: $primary-light;
+
+//input
+$bc-input: #BDC2CD;
+$fc-input-placeholder: #A2A9BA;
+$bg-input: #F3F4F6;
+$bc-focused: #6993FF;

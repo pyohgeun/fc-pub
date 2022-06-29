@@ -1,3 +1,13 @@
-body{
-    color: gray;
-}
+@import './_partial/reset';
+@import './_partial/function';
+@import './_partial/variables';
+@import './_partial/mixin';
+@import './_partial/fonts';
+@import './_partial/common';
+@import './_partial/icons';
+@import './_partial/button';
+@import './_partial/card';
+@import './_partial/inputText';
+@import './_partial/main';
+
+

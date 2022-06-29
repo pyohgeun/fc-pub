@@ -28,7 +28,7 @@ function serve(){
 }
 function build(done){
     
-    watch('./src/scss/*.scss', scss);
+    watch('./src/scss/**/*.scss', scss);
     watch('./**/*.html', html);
     
     done();

@@ -1,0 +1,72 @@
+
+.input-wrapper{
+    &.on-focus{
+        .input-label{
+            color: $fc-primary;
+        }
+        .input-border{
+            .input-text{
+                background-color: $primary-light;
+            }
+        }
+        .input-step{
+            border-bottom: 2px solid $bc-focused;
+        }
+    }
+    .input-border{
+        border: 1px solid $bc-input;
+        height: rem(42);
+        border-radius: rem(5);
+        overflow: hidden;
+        .input-text{
+            width: 100%;
+            height: 100%;
+            padding: rem(12) rem(10);
+            vertical-align: middle;
+            background-color: $bg-input;
+            font-size: rem(16);
+            color: $fc-default;
+            &::placeholder{
+                color: $fc-input-placeholder;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    .input-label{
+        display: block;
+        text-align: left;
+        font-size: rem(12);
+        color: $fc-bluegray50;
+        
+    }
+    .input-step{
+        position: relative;
+        border-bottom: 2px solid $bc-input;
+        padding-bottom: rem(10);
+        height: rem(33);
+        .input-text{
+            width: 100%;
+            height: 100%;
+            padding: rem(12) rem(10) rem(12) 0;
+            vertical-align: middle;
+            font-size: rem(16);
+            color: $fc-default;
+            &::placeholder{
+                color: $fc-input-placeholder;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        > button.btn-input-reset{
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            top: 0;
+            width: rem(20);
+            height: rem(20);
+        }
+    }
+}

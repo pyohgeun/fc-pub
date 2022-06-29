@@ -1,0 +1,15 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+html, body, input, select{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 16px;
+}
+@media screen and (min-width: $breakpoint-pad) {
+    html, body{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: $breakpoint-sm) {
+    html, body{
+        font-size: 14px;
+    }
+}
