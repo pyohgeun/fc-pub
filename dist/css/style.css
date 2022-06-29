@@ -2027,7 +2027,7 @@ html, body, input, select {
 }
 
 .icon-input-delete {
-  background-image: url("icon_input_delet.png");
+  background-image: url("../image/icon_input_delete.png");
 }
 
 .button {
@@ -2296,4 +2296,46 @@ html, body, input, select {
 .main .container .my-tax .right-side img {
   width: 6.25rem;
   height: 6.25rem;
+}
+
+.onboad .container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: #3D73FF;
+  color: #ffffff;
+}
+.onboad .splash {
+  text-align: center;
+  animation-duration: 1.5s;
+  animation-name: splash;
+}
+.onboad .splash .logo {
+  margin: auto;
+  width: 10.5rem;
+}
+.onboad .splash .logo img {
+  width: 100%;
+}
+.onboad .splash .catch-phrase {
+  font-size: 0.875rem;
+}
+
+@keyframes splash {
+  from {
+    transform: translate(0, 30%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
