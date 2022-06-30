@@ -4086,6 +4086,12 @@ html, body, input, select {
   background-image: url("../image/icon_briefcase.png");
 }
 
+.icon-check-circle {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../image/icon_check_circle.png");
+}
+
 .bottom-fix {
   position: fixed;
   width: 100%;
@@ -4900,6 +4906,31 @@ input[type=number] {
   line-height: 1.375rem;
   color: #8C8C8C;
   word-break: keep-all;
+}
+.register .container.set-certification-complete {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.register .container.set-certification-complete .img-wrap {
+  text-align: center;
+}
+.register .container.set-certification-complete .title-main {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #373A44;
+}
+.register .container.set-certification-complete .title-sub {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6D768D;
 }
 
 .simple-keyboard .btn-delete {

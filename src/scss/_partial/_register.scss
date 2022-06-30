@@ -251,5 +251,24 @@
                 word-break: keep-all;
             }
         }
+        &.set-certification-complete{
+            @include fullpage;
+            @include metropolis;
+            flex-direction: column;
+            .img-wrap{
+                text-align: center;
+            }
+            .title-main{
+                font-size: rem(24);
+                line-height: rem(32);
+                font-weight: 700;
+                color: $fc-default;
+            }
+            .title-sub{
+                font-size: rem(14);
+                line-height: rem(20);
+                color: $fc-bluegray50;
+            }
+        }
     }
 }
