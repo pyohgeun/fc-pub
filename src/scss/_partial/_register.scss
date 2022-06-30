@@ -7,6 +7,44 @@
             line-height: rem(28);
             font-weight: 700;
             color: $fc-default;
+            &.align-c{
+                text-align: center;
+            }
+        }
+        .desc{
+            font-size: rem(14);
+            color: $fc-bluegray40;
+        }
+        &.set-password-6{
+            .password-slot{
+                position: fixed;
+                left: rem(-100);
+                top: rem(-100);
+            }
+            .dots-group{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                > ul{
+                    display: flex;
+                    width: rem(160);
+                    justify-content: space-between;
+                    margin-left: auto;
+                    margin-right: auto;
+                    li{
+                        .dot{
+                            display: inline-block;
+                            width: rem(14);
+                            height: rem(14);
+                            border-radius: 50%;
+                            background-color: $primary-light;
+                            &.on{
+                                background-color: $fincube70;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,93 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/common_ui.js"></script>
+
+    <!-- simple-keyboard -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <title>핀큐브</title>
+</head>
+<body>
+    <div class="register">
+        <header class="header">
+            <div class="prefix">
+                <button class="button button-free btn-nav-prev">
+                    <span class="icon-nav-prev"></span>
+                </button>
+            </div>
+            <div class="suffix">
+                <!-- <button class="button button-free btn-close-pop">
+                    <span class="icon-close-popup-black"></span>
+                </button> -->
+            </div>
+        </header>
+        <div class="container set-password-6 mt-120">
+            <div class="label-request align-c">
+                앱 실행시 입력할<br>비밀번호를 입력해주세요
+            </div>
+            <p class="desc align-c mt-18">
+                숫자 6자리
+            </p>
+            <div class="dots-group mt-30">
+                <ul>
+                    <li>
+                        <span class="dot on"></span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-fix-fit">
+                <input id="password-6" class="password-slot" placeholder="" type="password" disabled />
+                <div class="simple-keyboard"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- simple-keyboard -->
+<script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+<script>
+    const Keyboard = window.SimpleKeyboard.default;
+
+    const myKeyboard = new Keyboard({
+        onChange: input => onChange(input),
+        onKeyPress: button => onKeyPress(button),
+        layout: {
+            default: ["1 2 3", "4 5 6", "7 8 9", " 0 {bksp}"]
+        },
+        inputPattern: /^\d+/,
+        theme: "hg-theme-default hg-layout-numeric numeric-theme fc-password-theme",
+        mergeDisplay: true,
+        display: {
+            '{bksp}': '<em class="btn-delete"><img src="../image/icon_keyboard_back.png"></em>',
+            '{aa}': '<span></span>'
+        }
+    });
+
+    function onChange(input) {
+        document.querySelector("#password-6").value = input;
+        console.log("Input changed", input);
+    }
+
+    function onKeyPress(button) {
+        console.log("Button pressed", button);
+    }
+</script>
+<!-- //simple-keyboard -->
+</html>

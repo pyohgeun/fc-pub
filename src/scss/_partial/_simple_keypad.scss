@@ -1,0 +1,25 @@
+.simple-keyboard{
+    .btn-delete{
+        display: inline-block;
+        width: rem(26);
+        height: rem(18);
+        img{
+            width: 100%;
+        }
+    }
+    &.fc-password-theme{
+        background-color: #ffffff;
+        &.hg-theme-default{
+            .hg-button{
+                border-bottom: 0;
+                box-shadow: none;
+            }
+            &.hg-layout-numeric{
+                .hg-button{
+                    height: rem(74);
+                }
+            }
+        }
+
+    }
+}
