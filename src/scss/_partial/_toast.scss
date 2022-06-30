@@ -1,0 +1,39 @@
+.toast-modal{
+    &.active{
+        display: inline-block;
+    }
+    $toast-pad: rem(24);
+    position: fixed;
+    display: none;
+    min-height: rem(200);
+    width: 100%;
+    background-color: #ffffff;
+    border-top-right-radius: rem(20);
+    border-top-left-radius: rem(20);
+    bottom: 0;
+    padding-left: $toast-pad;
+    padding-right: $toast-pad;
+    padding-bottom: $toast-pad;
+    padding-top: rem(30);
+    .toast-header{
+        font-size: rem(18);
+        color: $fc-default;
+        font-weight: 700;
+    }
+    .toast-body{
+        margin-top: rem(10);
+        padding-bottom: rem(80);
+        p{
+            font-size: rem(15);
+            line-height: rem(24);
+            color: $fc-bluegray50;
+            word-break: keep-all;
+        }
+    }
+    .toast-footer{
+        position: absolute;
+        bottom: $toast-pad;
+        left: $toast-pad;
+        right: $toast-pad;
+    }
+}

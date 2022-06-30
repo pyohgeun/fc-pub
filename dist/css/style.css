@@ -4055,6 +4055,18 @@ html, body, input, select {
   background-image: url("../image/icon_nav_prev.png");
 }
 
+.icon-finger-print {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url("../image/icon_finger_print.png");
+}
+
+.icon-finger-print-error {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-image: url("../image/icon_finger_print_error.png");
+}
+
 .bottom-fix {
   position: fixed;
   width: 100%;
@@ -4323,6 +4335,45 @@ input[type=number] {
   bottom: 1.875rem;
   left: 1.875rem;
   right: 1.875rem;
+}
+
+.toast-modal {
+  position: fixed;
+  display: none;
+  min-height: 12.5rem;
+  width: 100%;
+  background-color: #ffffff;
+  border-top-right-radius: 1.25rem;
+  border-top-left-radius: 1.25rem;
+  bottom: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.875rem;
+}
+.toast-modal.active {
+  display: inline-block;
+}
+.toast-modal .toast-header {
+  font-size: 1.125rem;
+  color: #373A44;
+  font-weight: 700;
+}
+.toast-modal .toast-body {
+  margin-top: 0.625rem;
+  padding-bottom: 5rem;
+}
+.toast-modal .toast-body p {
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #6D768D;
+  word-break: keep-all;
+}
+.toast-modal .toast-footer {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
 }
 
 .dim {
