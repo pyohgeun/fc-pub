@@ -35,6 +35,10 @@
         background-color: $btn-bg-lightgray;
         color: #9BA1AE;
     }
+    &.button-default{
+        background-color: $btn-bg-lightgray;
+        color: $fc-default;
+    }
     &.button-wide{
         display: flex;
         width: 100%;
@@ -78,5 +82,14 @@
     &:disabled{
         opacity: .3;
         cursor: default;
+    }
+}
+.button-group{
+    &.button-flex{
+        display: flex;
+        justify-content: space-between;
+        .button{
+            flex: 0 1 calc(50% - #{rem(3)});
+        }
     }
 }

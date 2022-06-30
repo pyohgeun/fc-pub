@@ -4095,6 +4095,10 @@ html, body, input, select {
   background-color: #F3F4F6;
   color: #9BA1AE;
 }
+.button.button-default {
+  background-color: #F3F4F6;
+  color: #373A44;
+}
 .button.button-wide {
   display: flex;
   width: 100%;
@@ -4138,6 +4142,14 @@ html, body, input, select {
 .button:disabled {
   opacity: 0.3;
   cursor: default;
+}
+
+.button-group.button-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.button-group.button-flex .button {
+  flex: 0 1 calc(50% - 0.1875rem);
 }
 
 .card {
@@ -4279,7 +4291,7 @@ input[type=number] {
 .dialog-modal {
   position: fixed;
   display: none;
-  min-height: 15.3125rem;
+  min-height: 12.5rem;
   width: 18.75rem;
   background-color: #ffffff;
   border-radius: 0.625rem;
@@ -4566,6 +4578,9 @@ input[type=number] {
 .register .container .desc {
   font-size: 0.875rem;
   color: #A2A9BA;
+}
+.register .container.set-password-6 {
+  margin-top: 12vh;
 }
 .register .container.set-password-6 .password-slot {
   position: fixed;
