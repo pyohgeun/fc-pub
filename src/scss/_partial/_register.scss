@@ -47,5 +47,69 @@
                 }
             }
         }
+        &.register-complete{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+            min-height: calc(100% - #{$header-height});
+            .title-main{
+                font-size: rem(20);
+                font-weight: 700;
+                line-height: rem(28);
+                color: $fc-default;
+            }
+            .title-sub{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: rem(14);
+                line-height: rem(22);
+                color: $fc-gray50;
+                word-break: keep-all;
+            }
+            .bottom-area{
+                flex: 1 1 auto;
+                &.bg-gray{
+                    background-color: $bg-bluegray5;
+                }
+                &.has-bottom-fix{
+                    padding-bottom: rem(110);
+                }
+                .img-wrap{
+                    width: rem(292);
+                    margin-left: auto;
+                    margin-right: auto;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .function-list{
+                    width: rem(260);
+                    margin-left: auto;
+                    margin-right: auto;
+                    ul{
+                        li{
+                            display: flex;
+                            height: rem(40);
+                            align-items: center;
+                            padding-left: rem(14);
+                            margin-bottom: rem(12);
+                            background-color: #ffffff;
+                            border-radius: rem(5);
+                            font-size: rem(15);
+                            line-height: rem(19);
+                            color: $fc-default;
+                            [class*="icon-"]{
+                                margin-right: rem(9);
+                            }
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
