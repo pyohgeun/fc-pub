@@ -2,3 +2,6 @@
 @function rem($size){
     @return math.div($size,16)+#{rem};
 }
+@function disabledLighten($hex){
+    @return lighten($hex, 25%);
+}

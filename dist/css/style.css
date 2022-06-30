@@ -10,6 +10,7 @@ ul, ol, li {
 
 body, html {
   overscroll-behavior-y: none;
+  scroll-behavior: smooth;
 }
 
 body * {
@@ -4092,7 +4093,9 @@ html, body, input, select {
   left: 0;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 1.875rem;
   padding-bottom: 1.875rem;
+  background-color: #ffffff;
 }
 
 .bottom-fix-fit {
@@ -4117,13 +4120,22 @@ html, body, input, select {
   background-color: #156BFF;
   color: #ffffff;
 }
+.button.button-primary:disabled {
+  background-color: #95bcff;
+}
 .button.button-secondary {
   background-color: #EAF2FF;
   color: #3D73FF;
 }
+.button.button-secondary:disabled {
+  color: #bdcfff;
+}
 .button.button-lightgray {
   background-color: #F3F4F6;
   color: #9BA1AE;
+}
+.button.button-lightgray:disabled {
+  color: #e1e3e7;
 }
 .button.button-default {
   background-color: #F3F4F6;
@@ -4143,6 +4155,19 @@ html, body, input, select {
   justify-content: center;
   align-items: center;
   padding: 0;
+}
+.button.button-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid #A2A9BA;
+  color: #A2A9BA;
+  border-radius: 0;
+  min-height: unset;
+  padding: 0 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1;
 }
 .button.button-md {
   display: inline-flex;
@@ -4169,7 +4194,6 @@ html, body, input, select {
   border-radius: 0;
 }
 .button:disabled {
-  opacity: 0.3;
   cursor: default;
 }
 
@@ -4299,8 +4323,8 @@ input[type=number] {
   align-items: center;
   width: 100%;
   min-height: 1.875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   height: 4.5rem;
   display: flex;
   align-items: center;
@@ -4738,6 +4762,79 @@ input[type=number] {
 }
 .register .container.register-complete .bottom-area .function-list ul li:last-child {
   margin-bottom: 0;
+}
+.register .container.register-complete .bottom-area .bottom-fix {
+  background-color: #F3F4F6;
+}
+.register .container.set-certification .title-main {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  color: #373A44;
+}
+.register .container.set-certification .title-sub {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: #8C8C8C;
+  word-break: keep-all;
+}
+.register .container.set-certification .partition {
+  border-top: 1px solid #F3F4F6;
+}
+.register .container.set-certification .step-info {
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+.register .container.set-certification .step-info li {
+  position: relative;
+  margin-bottom: 1.875rem;
+}
+.register .container.set-certification .step-info li .circle-num {
+  display: inline-flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #373A44;
+  border-radius: 50%;
+  font-size: 0.75rem;
+}
+.register .container.set-certification .step-info li p {
+  padding-left: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+}
+.register .container.set-certification .step-info li p > span {
+  display: block;
+  font-size: 0.75rem;
+  color: #8C8C8C;
+  line-height: 1.125rem;
+}
+.register .container.set-certification .auth-number-wrap .title {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #8C8C8C;
+}
+.register .container.set-certification .auth-number-wrap .number-plate {
+  display: block;
+  width: 15rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.00125rem;
+  background-color: #F3F4F6;
+  text-align: center;
+  border-radius: 0.3125rem;
 }
 
 .simple-keyboard .btn-delete {

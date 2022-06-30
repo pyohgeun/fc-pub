@@ -109,6 +109,83 @@
                         }
                     }
                 }
+                .bottom-fix{
+                    background-color: $bg-bluegray5;
+                }
+            }
+        }
+        &.set-certification{
+            .title-main{
+                font-size: rem(20);
+                font-weight: 700;
+                line-height: rem(28);
+                color: $fc-default;
+            }
+            .title-sub{
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: rem(14);
+                line-height: rem(22);
+                color: $fc-gray50;
+                word-break: keep-all;
+            }
+            .partition{
+                border-top: 1px solid $bluegray5;
+            }
+            .step-info{
+                margin-left: rem(10);
+                margin-right: rem(10);
+                li{
+                    position: relative;
+                    margin-bottom: rem(30);
+                    .circle-num{
+                        display: inline-flex;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: rem(20);
+                        height: rem(20);
+                        align-items: center;
+                        justify-content: center;
+                        color: #ffffff;
+                        background-color: $fc-default;
+                        border-radius: 50%;
+                        font-size: rem(12);
+                    }
+                    p{
+                        padding-left: rem(32);
+                        font-size: rem(14);
+                        line-height: rem(26);
+                        >span{
+                            display: block;
+                            font-size: rem(12);
+                            color: $fc-gray50;
+                            line-height: rem(18);
+                        }
+                    }
+                }
+            }
+            .auth-number-wrap{
+                .title{
+                    text-align: center;
+                    font-size: rem(12);
+                    color: $fc-gray50;
+                }
+                .number-plate{
+                    display: block;
+                    width: rem(240);
+                    padding-top: rem(8);
+                    padding-bottom: rem(8);
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: rem(16);
+                    line-height: rem(24);
+                    letter-spacing: rem(-0.02);
+                    background-color: $bg-bluegray5;
+                    text-align: center;
+                    border-radius: rem(5);
+                }
             }
         }
     }

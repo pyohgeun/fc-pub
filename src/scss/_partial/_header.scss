@@ -3,8 +3,8 @@
     align-items: center;
     width: 100%;
     min-height: rem(30);
-    padding-left: $container-pad;
-    padding-right: $container-pad;
+    padding-left: $container-pad-bold;
+    padding-right: $container-pad-bold;
     height: $header-height;
     @include prefix-suffix;
     justify-content: space-between;
