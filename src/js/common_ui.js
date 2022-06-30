@@ -41,7 +41,6 @@ const fc = {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    console.log('doc ready');
     for(let item in fc){
         fc[item]();
     }

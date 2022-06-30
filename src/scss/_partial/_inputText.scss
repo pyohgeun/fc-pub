@@ -92,6 +92,18 @@
                 width: 100%;
             }
         }
+        &.has-timer{
+            .timer{
+                position: absolute;
+                right: 0;
+                bottom: rem(14);
+                font-size: rem(12);
+                color: $fc-bluegray40;
+            }
+            .btn-input-reset{
+                right: rem(40);
+            }
+        }
     }
 }
 

@@ -1,0 +1,62 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/common_ui.js"></script>
+    <title>핀큐브</title>
+</head>
+<body>
+    <div class="register">
+        <header class="header">
+            <div class="prefix">
+                <button class="button button-free btn-close-pop">
+                    <span class="icon-close-popup-black"></span>
+                </button>
+            </div>
+            <div class="suffix">
+                <!-- <button class="button button-free btn-close-pop">
+                    <span class="icon-close-popup-black"></span>
+                </button> -->
+            </div>
+        </header>
+        <div class="container set-cert-number">
+            <div class="label-request mt-18">
+                문자로 전송된<br>인증번호 6자리를 입력해주세요
+            </div>
+            <div class="input-wrapper mt-50">
+                <div class="input-line has-timer">
+                    <input type="number" inputmode="numeric" name="id" placeholder="" class="input-text" value="">
+                    <button class="button button-free btn-input-reset">
+                        <img src="/dist/image/icon_input_delete.png" alt="">
+                    </button>
+                    <div class="timer">
+                        02:59
+                    </div>
+                </div>
+            </div>
+            <button class="button button-sm button-lightgray mt-14">인증 문자가 안와요</button>
+            <div class="bottom-fix-fit">
+                <button class="button button-fixed button-primary">확인</button>
+            </div>
+        </div>
+    </div>
+    <div class="dim"></div>
+    <div class="dialog-modal active">
+        <div class="dialog-header">
+            인증 문자가 오지 않나요?
+        </div>
+        <div class="dialog-body">
+            <p>
+                휴대폰 기기나 스팸 차단 앱에서 02-1000의 수신이 차단되어 있는지 확인해주세요.
+            </p>
+        </div>
+        <div class="dialog-footer">
+            <button class="button button-primary button-wide">확인</button>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+</html>

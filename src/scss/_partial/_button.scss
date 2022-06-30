@@ -7,6 +7,12 @@
     padding-right: $container-pad;
     padding-bottom: rem(30);
 }
+.bottom-fix-fit{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
 .button{
     border: 0;
     background-color: $btn-bg-default;
@@ -24,6 +30,10 @@
     &.button-secondary{
         background-color: $btn-bg-secondary;
         color: #3D73FF;
+    }
+    &.button-lightgray{
+        background-color: $btn-bg-lightgray;
+        color: #9BA1AE;
     }
     &.button-wide{
         display: flex;
@@ -49,6 +59,21 @@
         padding-left: rem(16);
         padding-right: rem(16);
         font-size: rem(14);
+    }
+    &.button-sm{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: rem(30);
+        font-size: rem(12);
+        border-radius: rem(6);
+    }
+    &.button-fixed{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
     }
     &:disabled{
         opacity: .3;

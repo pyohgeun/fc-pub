@@ -2,5 +2,11 @@
     .container{
         padding-left: $container-pad-bold;
         padding-right: $container-pad-bold;
+        .label-request{
+            font-size: rem(20);
+            line-height: rem(28);
+            font-weight: 700;
+            color: $fc-default;
+        }
     }
 }

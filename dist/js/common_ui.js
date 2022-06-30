@@ -61,8 +61,6 @@ var fc = {
   }
 };
 document.addEventListener("DOMContentLoaded", function () {
-  console.log('doc ready');
-
   for (var item in fc) {
     fc[item]();
   }

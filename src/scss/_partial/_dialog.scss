@@ -1,0 +1,37 @@
+.dialog-modal{
+    &.active{
+        display: inline-block;
+    }
+    $dialog-pad: rem(30);
+    position: fixed;
+    display: none;
+    min-height: rem(245);
+    width: rem(300);
+    background-color: #ffffff;
+    border-radius: rem(10);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: $dialog-pad;
+    .dialog-header{
+        font-size: rem(18);
+        color: $fc-default;
+        font-weight: 700;
+    }
+    .dialog-body{
+        margin-top: rem(10);
+        padding-bottom: rem(80);
+        p{
+            font-size: rem(15);
+            line-height: rem(24);
+            color: $fc-bluegray50;
+            word-break: keep-all;
+        }
+    }
+    .dialog-footer{
+        position: absolute;
+        bottom: $dialog-pad;
+        left: $dialog-pad;
+        right: $dialog-pad;
+    }
+}
