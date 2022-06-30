@@ -2037,6 +2037,12 @@ html, body, input, select {
   background-image: url("../image/icon_close_popup_black.png");
 }
 
+.icon-nav-prev {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../image/icon_nav_prev.png");
+}
+
 .bottom-fix {
   position: fixed;
   width: 100%;
