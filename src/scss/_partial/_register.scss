@@ -204,6 +204,14 @@
                             margin-right: rem(2);
                         }
                     }
+                    &.focused{
+                        &.set-number{
+                            background-color: $bg-focused;
+                            input{
+                                background-color: $bg-focused;
+                            }
+                        }
+                    }
                 }
             }
             .img-wrap{

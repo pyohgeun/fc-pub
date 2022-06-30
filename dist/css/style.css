@@ -4855,6 +4855,12 @@ input[type=number] {
   margin-left: 0.125rem;
   margin-right: 0.125rem;
 }
+.register .container.set-certification .auth-number-wrap .number-plate.focused.set-number {
+  background-color: #EFF4FF;
+}
+.register .container.set-certification .auth-number-wrap .number-plate.focused.set-number input {
+  background-color: #EFF4FF;
+}
 .register .container.set-certification .img-wrap.how-to-img {
   width: 17.5rem;
   margin-left: auto;
