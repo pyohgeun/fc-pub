@@ -75,9 +75,10 @@
             position: absolute;
             display: none;
             right: 0;
-            top: 0;
+            top: 50%;
             width: rem(20);
             height: rem(20);
+            transform: translateY(-50%);
             img{
                 width: 100%;
             }
