@@ -8,6 +8,19 @@
     <!-- progressbar.js -->
     <script type="text/javascript" src="../../node_modules/progressbar.js/dist/progressbar.min.js"></script>
     <title>핀큐브</title>
+    <style>
+        .progress {
+            height: 145px;
+            width: 145px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .progress > svg {
+            height: 100%;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="loading">
@@ -24,13 +37,65 @@
             </div>
         </header>
         <div class="container scraping-biz-info">
+            <div class="progress" id="progress"></div>
         </div>
     </div>
 </body>
 <!-- progressbar.js -->
 <script>
-    import ProgressBar from 'progressbar.js';
-    const circle = new ProgressBar
+    const circle = new ProgressBar.Circle('#progress', {
+        // color: '#156BFF',
+        duration: 3000,
+        easing: 'easeInOut',
+        strokeWidth: 5,
+        
+        // trailColor: 'rgba(21, 107, 255, 0.26)',
+        // trailWidth: 5,
+        from: { color: '#eee' },
+        to: { color: '#000' },
+        text: {
+            value: '72',
+                style: {
+                    // Text color.
+                    // Default: same as stroke color (options.color)
+                    color: '#3D73FF',
+                    position: 'absolute',
+                    left: '50%',
+                    top: '50%',
+                    padding: 0,
+                    margin: 0,
+                    // fontSize: '50px',
+                    // fontWeight: '700',
+                    transform: {
+                        prefix: true,
+                        value: 'translate(-40%, -60%)'
+                    }
+            }
+        }
+    });
+    circle.animate(0.5);
+    circle.path.setAttribute('stroke-linecap','round');
+
+    let svgDef = document.createElement('defs');
+    let gradient = document.createElement('linearGradient');
+    let stopStart = document.createElement('stop');
+    let stopEnd = document.createElement('stop');
+    gradient.id="fcCircle";
+    gradient.gradientTransform="rotate(90)";
+    stopStart.setAttribute('offset','5%');
+    stopStart.setAttribute('stop-color','#156BFF');
+    stopEnd.setAttribute('offset','95%');
+    stopEnd.setAttribute('stop-color','#ACCCFF');
+
+    gradient.appendChild(stopStart);
+    gradient.appendChild(stopEnd);
+    svgDef.appendChild(gradient);
+    console.log(circle.svg);
+    circle.svg.insertBefore(svgDef, circle.svg.firstChild);
+    circle.path.setAttribute('fill', "url(#fcCircle)");
+
+
+    console.log(circle.path.attributes.strokeLinecap);
 </script>
 <!-- //progressbar.js -->
 </html>
