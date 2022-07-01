@@ -1,39 +1,58 @@
 .loading{
-    .progress{
-        position: relative;
-        > svg{
-            >path{
-                // stroke-linecap: round;
+    .scraping-biz-info{
+        @include fullpage;
+        @include metropolis;
+        flex-direction: column;
+        .progress{
+            position: relative;
+            height: rem(162);
+            width: rem(162);
+            margin-left: auto;
+            margin-right: auto;
+            > svg{
+                height: 100%;
+                display: block;
             }
-        }
-        .progressbar-text{
-            font-size: rem(50);
-            font-weight: 700;
+            .progressbar-text{
+                font-size: rem(50);
+                font-weight: 700;
+                &:after{
+                    content: '%';
+                    font-size: rem(28);
+                }
+            }
             &:after{
-                content: '%';
-                font-size: rem(28);
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: rem(8);
+                left: rem(8);
+                width: rem(145);
+                height: rem(145);
+                z-index: -1;
+                border-radius: 50%;
+                box-shadow: 0px 0px rem(12) rem(2) rgba(21, 107, 255, 0.26);
+            }
+            &:before{
+                content: '진행률';
+                font-size: rem(16);
+                color: $fc-bluegray50;
+                position: absolute;
+                left: 50%;
+                top: calc(50% + #{rem(32)});
+                transform: translate(-50%, -50%);
             }
         }
-        &:after{
-            content: '';
-            display: inline-block;
-            position: absolute;
-            left: rem(8);
-            top: rem(8);
-            width: rem(130);
-            height: rem(130);
-            z-index: -1;
-            border-radius: 50%;
-            box-shadow: 0px 0px rem(12) rem(2) rgba(21, 107, 255, 0.26);
+        .title-main{
+            font-size: rem(20);
+            line-height: rem(28);
+            font-weight: 700;
+            color: $fc-default;
         }
-        &:before{
-            content: '진행률';
-            font-size: rem(16);
+        .title-sub{
+            font-size: rem(14);
+            line-height: rem(18);
             color: $fc-bluegray50;
-            position: absolute;
-            left: 50%;
-            top: calc(50% + #{rem(32)});
-            transform: translate(-50%, -50%);
         }
     }
 }

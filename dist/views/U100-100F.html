@@ -9,17 +9,7 @@
     <script type="text/javascript" src="../../node_modules/progressbar.js/dist/progressbar.min.js"></script>
     <title>핀큐브</title>
     <style>
-        .progress {
-            height: 145px;
-            width: 145px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .progress > svg {
-            height: 100%;
-            display: block;
-        }
+        
     </style>
 </head>
 <body>
@@ -36,15 +26,21 @@
                 </button> -->
             </div>
         </header>
-        <div class="container scraping-biz-info">
+        <div class="container scraping-biz-info align-c">
             <div class="progress" id="progress"></div>
+            <div class="title-main mt-50">
+                사업장 정보를 가져오는 중
+            </div>
+            <div class="title-sub mt-10">
+                잠시만 기다려 주세요.
+            </div>
         </div>
     </div>
 </body>
 <!-- progressbar.js -->
 <script>
     const circle = new ProgressBar.Circle('#progress', {
-        // color: '#156BFF',
+        color: '#156BFF',
         duration: 3000,
         easing: 'easeInOut',
         strokeWidth: 5,
