@@ -4338,6 +4338,34 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper.input-radio input[type=radio] {
+  position: absolute;
+  left: 0;
+}
+.input-wrapper.input-radio input[type=radio] + label {
+  position: relative;
+  padding-right: 1.5rem;
+}
+.input-wrapper.input-radio input[type=radio] + label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../image/icon_radio_off.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.input-wrapper.input-radio input[type=radio]:checked + label:before {
+  background-image: url("../image/icon_radio_on.png");
+}
+
 .header {
   display: flex;
   align-items: center;

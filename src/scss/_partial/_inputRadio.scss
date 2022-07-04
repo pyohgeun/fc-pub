@@ -1,0 +1,32 @@
+.input-wrapper{
+    position: relative;
+    &.input-radio{
+        input[type="radio"]{
+            position: absolute;
+            left: 0;
+            & + label{
+                position: relative;
+                padding-right: rem(24);
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: rem(24);
+                    height: rem(24);
+                    background-image: url('../image/icon_radio_off.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                
+            }
+            &:checked + label{
+                &:before{
+                    background-image: url('../image/icon_radio_on.png');
+                }
+            }
+        }
+    }
+}

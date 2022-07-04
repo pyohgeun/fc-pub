@@ -1,0 +1,119 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css?v=06301400">
+    <script type="text/javascript" src="../js/common_ui.js"></script>
+    <!-- progressbar.js -->
+    <script type="text/javascript" src="../../node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <title>핀큐브</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <header class="header">
+            <div class="prefix">
+                <!-- <button class="button button-free btn-nav-prev">
+                    <span class="icon-nav-prev"></span>
+                </button> -->
+            </div>
+            <div class="suffix">
+                <button class="button button-free btn-close-pop">
+                    <span class="icon-close-popup-black"></span>
+                </button>
+            </div>
+        </header>
+        <div class="container select-biz">
+            <!-- <div class="progress" id="progress"></div> -->
+            <div class="container">
+                <div class="title-main mt-50">
+                    사업자를 선택해주세요
+                </div>
+                <div class="biz-list-radio mt-42">
+                    <ul>
+                        <li>
+                            <div class="input-wrapper input-radio">
+                                <input type="radio" name="bizItem" id="biz01">
+                                <label for="biz01">
+                                    민간대한도소매
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-wrapper input-radio">
+                                <input type="radio" name="bizItem" id="biz02">
+                                <label for="biz02">
+                                    한림도소매
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-fix">
+                    <button class="button button-wide button-primary" disabled>선택완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- progressbar.js -->
+<script>
+    const circle = new ProgressBar.Circle('#progress', {
+        color: '#156BFF',
+        duration: 3000,
+        easing: 'easeInOut',
+        strokeWidth: 5,
+        
+        // trailColor: 'rgba(21, 107, 255, 0.26)',
+        // trailWidth: 5,
+        from: { color: '#eee' },
+        to: { color: '#000' },
+        text: {
+            value: '72',
+                style: {
+                    // Text color.
+                    // Default: same as stroke color (options.color)
+                    color: '#3D73FF',
+                    position: 'absolute',
+                    left: '50%',
+                    top: '50%',
+                    padding: 0,
+                    margin: 0,
+                    // fontSize: '50px',
+                    // fontWeight: '700',
+                    transform: {
+                        prefix: true,
+                        value: 'translate(-40%, -60%)'
+                    }
+            }
+        }
+    });
+    circle.animate(0.5);
+    circle.path.setAttribute('stroke-linecap','round');
+
+    let svgDef = document.createElement('defs');
+    let gradient = document.createElement('linearGradient');
+    let stopStart = document.createElement('stop');
+    let stopEnd = document.createElement('stop');
+    gradient.id="fcCircle";
+    gradient.gradientTransform="rotate(90)";
+    stopStart.setAttribute('offset','5%');
+    stopStart.setAttribute('stop-color','#156BFF');
+    stopEnd.setAttribute('offset','95%');
+    stopEnd.setAttribute('stop-color','#ACCCFF');
+
+    gradient.appendChild(stopStart);
+    gradient.appendChild(stopEnd);
+    svgDef.appendChild(gradient);
+    console.log(circle.svg);
+    circle.svg.insertBefore(svgDef, circle.svg.firstChild);
+    circle.path.setAttribute('fill', "url(#fcCircle)");
+
+
+    console.log(circle.path.attributes.strokeLinecap);
+</script>
+<!-- //progressbar.js -->
+</html>
