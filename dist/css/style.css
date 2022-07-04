@@ -4995,26 +4995,26 @@ input[type=number] {
   justify-content: center;
   flex-direction: column;
 }
-.loading .scraping-biz-info .progress {
+.loading .progress {
   position: relative;
   height: 10.125rem;
   width: 10.125rem;
   margin-left: auto;
   margin-right: auto;
 }
-.loading .scraping-biz-info .progress > svg {
+.loading .progress > svg {
   height: 100%;
   display: block;
 }
-.loading .scraping-biz-info .progress .progressbar-text {
+.loading .progress .progressbar-text {
   font-size: 3.125rem;
   font-weight: 700;
 }
-.loading .scraping-biz-info .progress .progressbar-text:after {
+.loading .progress .progressbar-text:after {
   content: "%";
   font-size: 1.75rem;
 }
-.loading .scraping-biz-info .progress:after {
+.loading .progress:after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -5026,7 +5026,7 @@ input[type=number] {
   border-radius: 50%;
   box-shadow: 0px 0px 0.75rem 0.125rem rgba(21, 107, 255, 0.26);
 }
-.loading .scraping-biz-info .progress:before {
+.loading .progress:before {
   content: "진행률";
   font-size: 1rem;
   color: #6D768D;
@@ -5035,14 +5035,25 @@ input[type=number] {
   top: calc(50% + 2rem);
   transform: translate(-50%, -50%);
 }
-.loading .scraping-biz-info .title-main {
+.loading .title-main {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
   color: #373A44;
 }
-.loading .scraping-biz-info .title-sub {
+.loading .title-sub {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6D768D;
+}
+.loading .select-biz .container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.loading .select-biz .container .input-radio label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
 }
