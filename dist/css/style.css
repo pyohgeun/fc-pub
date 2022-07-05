@@ -21,6 +21,9 @@ body * {
 a {
   text-decoration: none;
 }
+a:visited {
+  color: inherit;
+}
 
 button {
   outline: none;
@@ -4124,6 +4127,24 @@ html, body, input, select {
   background-image: url("../image/icon_check_circle.png");
 }
 
+.icon-refresh {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../image/icon_refresh.png");
+}
+
+.icon-select-arrow {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url("../image/icon_select_arrow.png");
+}
+
+.icon-btn-link-arrow {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url("../image/icon_btn_link_arrow.png");
+}
+
 .button {
   border: 0;
   background-color: #F0F0F0;
@@ -4518,10 +4539,25 @@ input[type=number] {
   color: #6D768D;
 }
 .main .header .button {
+  height: 1.5rem;
   margin-left: 1.25rem;
 }
 .main .header .button img {
   width: 1.5rem;
+}
+.main .header .button.has-notice {
+  position: relative;
+}
+.main .header .button.has-notice:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.5rem);
+  transform: translateY(-50%);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #FF7474;
 }
 .main .container {
   padding-left: 1rem;
@@ -4535,6 +4571,44 @@ input[type=number] {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6D768D;
+}
+.main .container .my-taxbill-info.on-load .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .container .my-taxbill-info.on-load .title .button {
+  min-height: unset;
+  height: 2.25rem;
+  width: 5.25rem;
+  font-size: 0.875rem;
+}
+.main .container .my-taxbill-info.on-load .info-summary li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.main .container .my-taxbill-info.on-load .info-summary li:last-child {
+  margin-bottom: 0;
+}
+.main .container .my-taxbill-info.on-load .info-summary li .img-wrap {
+  width: 3rem;
+  margin-right: 0.375rem;
+}
+.main .container .my-taxbill-info.on-load .info-summary li .img-wrap img {
+  width: 100%;
+}
+.main .container .my-taxbill-info.on-load .info-summary li .dd {
+  font-size: 0.8125rem;
+  color: #6D768D;
+  line-height: 1rem;
+}
+.main .container .my-taxbill-info.on-load .info-summary li .dd .total-amount {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #373A44;
+  line-height: 1.3125rem;
 }
 .main .container h2 {
   font-size: 1.0625rem;
@@ -4561,10 +4635,13 @@ input[type=number] {
   display: flex;
   flex: 1 0 70%;
 }
-.main .container .my-bill-list .left-side img {
+.main .container .my-bill-list .left-side .img-wrap {
   width: 3rem;
   height: 3rem;
   margin-right: 0.375rem;
+}
+.main .container .my-bill-list .left-side .img-wrap img {
+  width: 100%;
 }
 .main .container .my-bill-list .left-side .text-wrap {
   display: flex;
@@ -4580,6 +4657,23 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.main .container .my-bill-list.on-load .left-side .img-wrap {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.375rem;
+}
+.main .container .my-bill-list.on-load .left-side .dd {
+  font-size: 0.8125rem;
+  color: #6D768D;
+  line-height: 1rem;
+}
+.main .container .my-bill-list.on-load .left-side .dd .total-amount {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #373A44;
+  line-height: 1.3125rem;
 }
 .main .container .my-cash-receipt-list {
   display: flex;
@@ -4616,6 +4710,48 @@ input[type=number] {
   flex-direction: column;
   justify-content: center;
 }
+.main .container .my-cash-receipt-list.on-load {
+  display: block;
+  justify-self: unset;
+}
+.main .container .my-cash-receipt-list.on-load .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main .container .my-cash-receipt-list.on-load .title .button {
+  min-height: unset;
+  height: 2.25rem;
+  width: 5.25rem;
+  font-size: 0.875rem;
+}
+.main .container .my-cash-receipt-list.on-load .info-summary li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.main .container .my-cash-receipt-list.on-load .info-summary li:last-child {
+  margin-bottom: 0;
+}
+.main .container .my-cash-receipt-list.on-load .info-summary li .img-wrap {
+  width: 3rem;
+  margin-right: 0.375rem;
+}
+.main .container .my-cash-receipt-list.on-load .info-summary li .img-wrap img {
+  width: 100%;
+}
+.main .container .my-cash-receipt-list.on-load .info-summary li .dd {
+  font-size: 0.8125rem;
+  color: #6D768D;
+  line-height: 1rem;
+}
+.main .container .my-cash-receipt-list.on-load .info-summary li .dd .total-amount {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #373A44;
+  line-height: 1.3125rem;
+}
 .main .container .my-tax {
   display: flex;
   justify-content: space-between;
@@ -4631,7 +4767,86 @@ input[type=number] {
   width: 6.25rem;
   height: 6.25rem;
 }
-
+.main .container .my-tax.on-load {
+  display: block;
+  justify-content: unset;
+  align-items: unset;
+}
+.main .container .my-tax.on-load .title, .main .container .my-tax.on-load .my-tax-body {
+  display: flex;
+}
+.main .container .my-tax.on-load .title {
+  align-items: center;
+  justify-content: space-between;
+}
+.main .container .my-tax.on-load .title .button-free {
+  color: #6D768D;
+  font-size: 0.875rem;
+  padding-right: 1.25rem;
+  background-image: url(../image/icon_btn_link_arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1.125rem 1.125rem;
+}
+.main .container .my-tax.on-load .my-tax-body {
+  justify-content: space-between;
+}
+.main .container .my-tax.on-load .my-tax-body .left-side {
+  position: relative;
+}
+.main .container .my-tax.on-load .my-tax-body .left-side .period {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.75rem;
+  color: #A9A9A9;
+}
+.main .container .fincube-guide a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main .container .fincube-guide a .left-side h2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #373A44;
+}
+.main .container .fincube-guide a .left-side .sub-text {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  color: #6D768D;
+}
+.main .container .fincube-guide a .right-side {
+  flex: 0 1 4.0625rem;
+}
+.main .container .fincube-guide a .right-side img {
+  width: 100%;
+}
+.main .container .refresh-wrap {
+  text-align: right;
+}
+.main .container .refresh-wrap .btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  font-size: 0.75rem;
+  color: #A9A9A9;
+  line-height: 0.9375rem;
+}
+.main .container .select-period .label {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6D768D;
+}
+.main .container .select-period button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6D768D;
+  background-color: transparent;
+}
 .onboad .splash {
   position: fixed;
   top: 0;
@@ -5084,4 +5299,12 @@ input[type=number] {
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+}
+
+@media (min-width: 800px) {
+  .loading .select-biz .container {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

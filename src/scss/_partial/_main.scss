@@ -24,9 +24,24 @@
             color: $fc-bluegray50;
         }
         .button{
+            height: rem(24);
             margin-left: rem(20);
             img{
                 width: rem(24);
+            }
+            &.has-notice{
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: calc(50% - #{rem(8)});
+                    transform: translateY(-50%);
+                    width: rem(10);
+                    height: rem(10);
+                    border-radius: 50%;
+                    background-color: $notice-red;
+                }
             }
         }
     }
@@ -42,6 +57,48 @@
                 font-size: rem(14);
                 line-height: rem(18);
                 color: $fc-bluegray50;
+            }
+            &.on-load{
+                .title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .button{
+                        min-height: unset;
+                        height: rem(36);
+                        width: rem(84);
+                        font-size: rem(14);
+                    }
+                }
+                .info-summary{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: rem(24);
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        .img-wrap{
+                            width: rem(48);
+                            margin-right: rem(6);
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .dd{
+                            font-size: rem(13);
+                            color: $fc-bluegray50;
+                            line-height: rem(16);
+                            .total-amount{
+                                display: block;
+                                font-size: rem(17);
+                                font-weight: 700;
+                                color: $fc-default;
+                                line-height: rem(21);
+                            }
+                        }
+                    }
+                }
             }
         }
         h2{
@@ -67,10 +124,13 @@
             .left-side{
                 display: flex;
                 flex: 1 0 70%;
-                img{
+                .img-wrap{
                     width: rem(48);
                     height: rem(48);
                     margin-right: rem(6); 
+                    img{
+                        width: 100%;
+                    }
                 }
                 .text-wrap{
                     display: flex;
@@ -87,6 +147,26 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+            }
+            &.on-load{
+                .left-side{
+                    .img-wrap{
+                        width: rem(48);
+                        height: rem(48);
+                        margin-right: rem(6);
+                    }
+                    .dd{font-size: rem(13);
+                        color: $fc-bluegray50;
+                        line-height: rem(16);
+                        .total-amount{
+                            display: block;
+                            font-size: rem(17);
+                            font-weight: 700;
+                            color: $fc-default;
+                            line-height: rem(21);
+                        }
+                    }
+                }
             }
         }
         .my-cash-receipt-list{
@@ -123,6 +203,50 @@
                 flex-direction: column;
                 justify-content: center;
             }
+            &.on-load{
+                display: block;
+                justify-self: unset;
+                .title{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .button{
+                        min-height: unset;
+                        height: rem(36);
+                        width: rem(84);
+                        font-size: rem(14);
+                    }
+                }
+                .info-summary{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: rem(24);
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        .img-wrap{
+                            width: rem(48);
+                            margin-right: rem(6);
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .dd{
+                            font-size: rem(13);
+                            color: $fc-bluegray50;
+                            line-height: rem(16);
+                            .total-amount{
+                                display: block;
+                                font-size: rem(17);
+                                font-weight: 700;
+                                color: $fc-default;
+                                line-height: rem(21);
+                            }
+                        }
+                    }
+                }
+            }
         }
         .my-tax{
             display: flex;
@@ -138,6 +262,94 @@
                 img{
                     width: rem(100);
                     height: rem(100);
+                }
+            }
+            &.on-load{
+                display: block;
+                justify-content: unset;
+                align-items: unset;
+                .title, .my-tax-body{
+                    display: flex;
+                }
+                .title{
+                    align-items: center;
+                    justify-content: space-between;
+                    .button-free{
+                        color: $fc-bluegray50;
+                        font-size: rem(14);
+                        padding-right: rem(20);
+                        background-image: url(../image/icon_btn_link_arrow.png);
+                        background-repeat: no-repeat;
+                        background-position: right center;
+                        background-size: rem(18) rem(18);
+                    }
+                }
+                .my-tax-body{
+                    justify-content: space-between;
+                    .left-side{
+                        position: relative;
+                        .period{
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            font-size: rem(12);
+                            color: $fc-gray40;
+                        }
+                    }
+                }
+            }
+        }
+        .fincube-guide{
+            a{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                .left-side{
+                    h2{
+                        font-size: rem(16);
+                        line-height: rem(24);
+                        color: $fc-default;
+                    }
+                    .sub-text{
+                        font-size: rem(12);
+                        line-height: rem(15);
+                        color: $fc-bluegray50;
+                    }
+                }
+                .right-side{
+                    flex: 0 1 rem(65);
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .refresh-wrap{
+            text-align: right;
+            .btn-refresh{
+                display: inline-flex;
+                align-items: center;
+                background-color: transparent;
+                font-size: rem(12);
+                color: $fc-gray40;
+                line-height: rem(15);
+            }
+        }
+        .select-period{
+            .label{
+                font-size: rem(14);
+                line-height: rem(18);
+                color: $fc-bluegray50;
+            }
+            button{
+                display: inline-flex;
+                align-items: center;
+                font-size: rem(14);
+                line-height: rem(18);
+                color: $fc-bluegray50;
+                background-color: transparent;
+                .period{
                 }
             }
         }

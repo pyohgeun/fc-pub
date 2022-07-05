@@ -280,9 +280,7 @@
 @media (min-width: $breakpoint-pad){
     .register{
         .container{
-            width: calc($breakpoint-sm*2);
-            margin-left: auto;
-            margin-right: auto;
+            @include container-pc;
         }
     }
 }

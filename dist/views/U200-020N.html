@@ -1,0 +1,171 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css?v=06301400">
+    <script type="text/javascript" src="../js/common_ui.js"></script>
+    <!-- progressbar.js -->
+    <script type="text/javascript" src="../../node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <title>핀큐브</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="prefix">
+                <h1>제로마트</h1>
+                <div class="info-text">일반과세업자</div>
+            </div>
+            <div class="center"></div>
+            <div class="suffix">
+                <button class="button button-free button-trans has-notice"><img src="../image/icon_bell.png"></button>
+                <button class="button button-free button-trans"><img src="../image/icon_setting.png"></button>
+            </div>
+        </div>
+        <div class="container pt-30 pb-30">
+            <div class="card">
+                <div class="fincube-guide">
+                    <a href="">
+                        <div class="left-side">
+                            <div class="text-wrap">
+                                <h2>계산서 발급하는 쉬운 방법</h2>
+                                <p class="sub-text mt-2">핀큐브 사용법에 관한 가이드</p>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                            <img src="../image/img_fincube_guide.png" alt="핀큐브사용법 이미지" class="img-fincube-guide">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="refresh-wrap mt-22">
+                <button class="btn-refresh">01.17 14:09 <span class="icon-refresh ml-8"></span></button>
+            </div>
+            <div class="select-period mt-20 mb-16">
+                <span class="label mr-16">조회기간</span>
+                <button>
+                    <span class="period">21.12.01 ~ 21.12.31</span>
+                    <span class="icon-select-arrow ml-4"></span>
+                </button>
+            </div>
+            <!-- <div class="card">
+                <div>
+                    <div class="my-taxbill-info">
+                        <img src="../image/img_my_taxbill_info.png"
+                            alt="">
+                        <h2 class="mt-30">내 전자계산서 내역은?</h2>
+                        <p class="sub-text mb-30">홈택스 연동으로 내 모든 세금계산서 내역을<br> 한눈에 조회하고 관리하세요.</p><button
+                            class="button button-wide button-primary">확인하기</button>
+                    </div>
+                </div>
+            </div> -->
+            <div class="card">
+                <div>
+                    <div class="my-taxbill-info on-load">
+                        <div class="title">
+                            <h2>전자세금계산서</h2>
+                            <button class="button button-primary">발급하기</button>
+                        </div>
+                        <div class="info-summary mt-24">
+                            <ul>
+                                <li>
+                                    <div class="img-wrap">
+                                        <img src="../image/img_input_list.png" alt="발급내역 이미지">
+                                    </div>
+                                    <div class="dd">
+                                        <span class="label">발급내역 ∙ </span> <span class="count">213건</span>
+                                        <span class="total-amount mt-6 has-notice">1,231,230,000원</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-wrap">
+                                        <img src="../image/img_output_list.png" alt="받은내역 이미지">
+                                    </div>
+                                    <div class="dd">
+                                        <span class="label">받은내역 ∙ </span> <span class="count">127건</span>
+                                        <span class="total-amount mt-6 has-notice">1,231,230,000원</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10">
+                <div class="card">
+                    <div>
+                        <div class="my-bill-list on-load">
+                            <div class="left-side">
+                                <div class="img-wrap">
+                                    <img src="../image/img_my_taxbill_list.png" alt="">
+                                </div>
+                                <div class="dd">
+                                    <span class="label">전자계산서 받은내역 ∙ </span> <span class="count">213건</span>
+                                    <span class="total-amount mt-6 has-notice">1,231,230,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10">
+                <div class="card">
+                    <div>
+                        <div class="my-cash-receipt-list on-load">
+                            <div class="title">
+                                <h2>현금영수증</h2>
+                                <button class="button button-primary">발급하기</button>
+                            </div>
+                            <div class="info-summary mt-24">
+                                <ul>
+                                    <li>
+                                        <div class="img-wrap">
+                                            <img src="../image/img_input_list.png" alt="발급내역 이미지">
+                                        </div>
+                                        <div class="dd">
+                                            <span class="label">발급내역 ∙ </span> <span class="count">213건</span>
+                                            <span class="total-amount mt-6 has-notice">1,231,230,000원</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-wrap">
+                                            <img src="../image/img_output_list.png" alt="받은내역 이미지">
+                                        </div>
+                                        <div class="dd">
+                                            <span class="label">받은내역 ∙ </span> <span class="count">127건</span>
+                                            <span class="total-amount mt-6 has-notice">1,231,230,000원</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10">
+                <div class="card">
+                    <div>
+                        <div class="my-tax on-load">
+                            <div class="title">
+                                <h2>세금</h2>
+                                <button class="button button-free">자세히보기</button>
+                            </div>
+                            <div class="my-tax-body mt-22">
+                                <div class="left-side">
+                                    <span class="fs-16">내야 할 예상 부가세</span><br>
+                                    <span class="fw-bold fs-17 mt-6">1,680,000원</span><br>
+                                    <span class="period">21.1.1 ~ 21.3.1</span>
+                                </div>
+                                <div class="right-side"><img src="../image/img_my_tax.png" alt="" class="img-my-tax"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
