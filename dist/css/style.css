@@ -4387,6 +4387,60 @@ input[type=number] {
   background-image: url("../image/icon_radio_on.png");
 }
 
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper .input-checkbox {
+  position: absolute;
+  left: 0;
+}
+.input-wrapper .input-checkbox.front + label {
+  display: flex;
+  align-items: center;
+}
+.input-wrapper .input-checkbox.front + label:before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/icon_checkbox_off.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 0.3125rem;
+}
+.input-wrapper .input-checkbox.front:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/icon_checkbox_on.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.input-wrapper .input-checkbox.rear + label {
+  display: flex;
+  align-items: center;
+}
+.input-wrapper .input-checkbox.rear + label:after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/icon_checkbox_off.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 0.3125rem;
+}
+.input-wrapper .input-checkbox.rear:checked + label:after {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/icon_checkbox_on.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -4396,6 +4450,7 @@ input[type=number] {
   padding-right: 1.5rem;
   height: 4.5rem;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
 }
@@ -4403,6 +4458,17 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.header .center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
 }
 .header .suffix {
   display: flex;
@@ -4465,13 +4531,49 @@ input[type=number] {
   display: inline-block;
 }
 .toast-modal .toast-header {
+  display: flex;
+  position: relative;
+  align-items: center;
   font-size: 1.125rem;
   color: #373A44;
   font-weight: 700;
 }
+.toast-modal .toast-header .prefix {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.toast-modal .toast-header .center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.toast-modal .toast-header .suffix {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.toast-modal .toast-header.align-c {
+  justify-content: center;
+}
+.toast-modal .toast-header .button {
+  min-height: 0;
+}
 .toast-modal .toast-body {
   margin-top: 0.625rem;
   padding-bottom: 5rem;
+  max-height: 50vh;
+  overflow-y: auto;
+  margin-left: calc(1.5rem * -1);
+  margin-right: calc(1.5rem * -1);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .toast-modal .toast-body p {
   font-size: 0.9375rem;
@@ -4508,6 +4610,7 @@ input[type=number] {
 }
 .main .header {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   align-items: flex-start;
@@ -4519,6 +4622,17 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.main .header .center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
 }
 .main .header .suffix {
   display: flex;
@@ -4598,13 +4712,14 @@ input[type=number] {
 .main .container .my-taxbill-info.on-load .info-summary li .img-wrap img {
   width: 100%;
 }
-.main .container .my-taxbill-info.on-load .info-summary li .dd {
+.main .container .my-taxbill-info.on-load .info-summary li .dd .dd-header {
+  display: block;
   font-size: 0.8125rem;
   color: #6D768D;
   line-height: 1rem;
+  margin-bottom: 0.375rem;
 }
 .main .container .my-taxbill-info.on-load .info-summary li .dd .total-amount {
-  display: block;
   font-size: 1.0625rem;
   font-weight: 700;
   color: #373A44;
@@ -4663,13 +4778,14 @@ input[type=number] {
   height: 3rem;
   margin-right: 0.375rem;
 }
-.main .container .my-bill-list.on-load .left-side .dd {
+.main .container .my-bill-list.on-load .left-side .dd .dd-header {
+  display: block;
   font-size: 0.8125rem;
   color: #6D768D;
   line-height: 1rem;
+  margin-bottom: 0.375rem;
 }
 .main .container .my-bill-list.on-load .left-side .dd .total-amount {
-  display: block;
   font-size: 1.0625rem;
   font-weight: 700;
   color: #373A44;
@@ -4740,13 +4856,14 @@ input[type=number] {
 .main .container .my-cash-receipt-list.on-load .info-summary li .img-wrap img {
   width: 100%;
 }
-.main .container .my-cash-receipt-list.on-load .info-summary li .dd {
+.main .container .my-cash-receipt-list.on-load .info-summary li .dd .dd-header {
+  display: block;
   font-size: 0.8125rem;
   color: #6D768D;
   line-height: 1rem;
+  margin-bottom: 0.375rem;
 }
 .main .container .my-cash-receipt-list.on-load .info-summary li .dd .total-amount {
-  display: block;
   font-size: 1.0625rem;
   font-weight: 700;
   color: #373A44;
@@ -4847,6 +4964,55 @@ input[type=number] {
   color: #6D768D;
   background-color: transparent;
 }
+.main .total-amount {
+  position: relative;
+}
+.main .total-amount.has-notice {
+  position: relative;
+}
+.main .total-amount.has-notice:before {
+  content: "";
+  position: absolute;
+  right: -0.5rem;
+  top: calc(50% - 0.75rem);
+  transform: translateY(-50%);
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  background-color: #FF7474;
+}
+
+.period-select-wrap .toast-modal .toast-body .period-select-topper {
+  margin-top: 3.125rem;
+}
+.period-select-wrap .toast-modal .toast-body .period-select-topper ul li {
+  margin-bottom: 1.875rem;
+}
+.period-select-wrap .toast-modal .toast-body .period-select-topper ul li:last-child {
+  margin-bottom: 0;
+}
+.period-select-wrap .toast-modal .toast-body .period-select-topper ul li .description {
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  color: #8C8C8C;
+  margin-bottom: 0.1875rem;
+}
+.period-select-wrap .toast-modal .toast-body .period-list {
+  margin-top: 1.875rem;
+}
+.period-select-wrap .toast-modal .toast-body .period-list ul li {
+  margin-bottom: 1.875rem;
+}
+.period-select-wrap .toast-modal .toast-body .period-list ul li:last-child {
+  margin-bottom: 0;
+}
+.period-select-wrap .toast-modal .toast-body .input-wrapper label {
+  font-size: 0.9375rem;
+  line-height: 1.1875rem;
+  color: #373A44;
+  justify-content: space-between;
+}
+
 .onboad .splash {
   position: fixed;
   top: 0;

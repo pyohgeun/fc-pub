@@ -16,13 +16,26 @@
     padding-bottom: $toast-pad;
     padding-top: rem(30);
     .toast-header{
+        @include prefix-suffix;
         font-size: rem(18);
         color: $fc-default;
         font-weight: 700;
+        &.align-c{
+            justify-content: center;
+        }
+        .button{
+            min-height: 0;
+        }
     }
     .toast-body{
         margin-top: rem(10);
         padding-bottom: rem(80);
+        max-height: 50vh;
+        overflow-y: auto;
+        margin-left: calc($toast-pad * -1);
+        margin-right: calc($toast-pad * -1);
+        padding-left: $toast-pad;
+        padding-right: $toast-pad;
         p{
             font-size: rem(15);
             line-height: rem(24);
