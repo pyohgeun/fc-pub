@@ -4145,6 +4145,18 @@ html, body, input, select {
   background-image: url("../image/icon_btn_link_arrow.png");
 }
 
+.icon-notice {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../image/icon_notice.png");
+}
+
+.icon-notice-taxbill {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../image/icon_notice_taxbill.png");
+}
+
 .button {
   border: 0;
   background-color: #F0F0F0;
@@ -4452,6 +4464,7 @@ input[type=number] {
   display: flex;
   position: relative;
   align-items: center;
+  z-index: 0;
   justify-content: space-between;
 }
 .header .prefix {
@@ -4534,6 +4547,7 @@ input[type=number] {
   display: flex;
   position: relative;
   align-items: center;
+  z-index: 0;
   font-size: 1.125rem;
   color: #373A44;
   font-weight: 700;
@@ -4612,6 +4626,7 @@ input[type=number] {
   display: flex;
   position: relative;
   align-items: center;
+  z-index: 0;
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 2rem;
@@ -4643,6 +4658,9 @@ input[type=number] {
   flex-direction: column;
   align-items: flex-start;
 }
+.main .header .suffix .button {
+  margin-left: 1.25rem;
+}
 .main .header h1 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -4654,7 +4672,6 @@ input[type=number] {
 }
 .main .header .button {
   height: 1.5rem;
-  margin-left: 1.25rem;
 }
 .main .header .button img {
   width: 1.5rem;
@@ -5011,6 +5028,117 @@ input[type=number] {
   line-height: 1.1875rem;
   color: #373A44;
   justify-content: space-between;
+}
+
+.main-notice {
+  min-height: 100vh;
+  background-color: #F3F4F6;
+}
+.main-notice .header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  z-index: 0;
+  position: fixed;
+  height: 4.5rem;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #F3F4F6;
+}
+.main-notice .header .prefix {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main-notice .header .center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.main-notice .header .suffix {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main-notice .header .prefix {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main-notice .header .suffix .button {
+  margin-left: 1.25rem;
+}
+.main-notice .header .button {
+  height: 1.5rem;
+}
+.main-notice .header .button img {
+  width: 1.5rem;
+}
+.main-notice .container {
+  padding-top: 4.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.main-notice .container .notice-list {
+  padding-bottom: 1.875rem;
+}
+.main-notice .container .notice-list > ul > li {
+  margin-bottom: 0.625rem;
+}
+.main-notice .container .notice-list > ul > li:last-child {
+  margin-bottom: 0;
+}
+.main-notice .container .notice-list > ul > li .card > a {
+  display: flex;
+}
+.main-notice .container .notice-list > ul > li .card > a .left-side {
+  margin-right: 0.5rem;
+}
+.main-notice .container .notice-list > ul > li .card > a .right-side {
+  flex: 1 1 auto;
+}
+.main-notice .container .notice-list > ul > li .card > a .notice-item .notice-item-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+  color: #A9A9A9;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+.main-notice .container .notice-list > ul > li .card > a .notice-item .notice-item-text {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+.main-notice .container .no-result {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-notice .container .no-result .img-wrap {
+  background-color: #ffffff;
+  width: 5.375rem;
+  height: 5.375rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-notice .container .no-result .img-wrap img {
+  width: 3.625rem;
 }
 
 .onboad .splash {

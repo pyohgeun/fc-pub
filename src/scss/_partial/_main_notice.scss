@@ -1,0 +1,90 @@
+
+.main-notice{
+    min-height: 100vh;
+    background-color: $bg-bluegray5;
+    .header{
+        @include prefix-suffix;
+        position: fixed;
+        height: $header-height;
+        justify-content: space-between;
+        padding-left: $container-pad;
+        padding-right: $container-pad;
+        background-color: $bg-bluegray5;
+        .prefix{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .suffix{
+            .button{
+                margin-left: rem(20);
+            }
+        }
+        .button{
+            height: rem(24);
+            img{
+                width: rem(24);
+            }
+        }
+    }
+    .container{
+        padding-top: $header-height;
+        padding-left: $container-pad;
+        padding-right: $container-pad;
+        .notice-list{
+            padding-bottom: rem(30);
+            > ul{
+                > li{
+                    margin-bottom: rem(10);
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .card{
+                        >a{
+                            display: flex;
+                            .left-side{
+                                margin-right: rem(8);
+                            }
+                            .right-side{
+                                flex: 1 1 auto;
+                            }
+                            
+                            .notice-item{
+                                .notice-item-header{
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: space-between;
+                                    margin-bottom: rem(10);
+                                    color: $fc-gray40;
+                                    font-size: rem(12);
+                                    line-height: rem(15);
+                                }
+                                .notice-item-text{
+                                    font-size: rem(14);
+                                    line-height: rem(18);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .no-result{
+            @include fullpage;
+            @include metropolis;
+            flex-direction: column;
+            .img-wrap{
+                background-color: #ffffff;
+                width: rem(86);
+                height: rem(86);
+                border-radius: 50%;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: rem(58);
+                }
+            }
+        }
+    }
+}
