@@ -4036,6 +4036,10 @@ html, body, input, select {
   text-align: left;
 }
 
+.emphas {
+  color: #FF5858;
+}
+
 .bottom-fix {
   position: fixed;
   width: 100%;
@@ -4237,6 +4241,8 @@ html, body, input, select {
   min-height: 1.875rem;
   font-size: 0.75rem;
   border-radius: 0.375rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 .button.button-fixed {
   display: flex;
@@ -5493,6 +5499,10 @@ input[type=number] {
 }
 .register .register-complete .bottom-area .bottom-fix {
   background-color: #F3F4F6;
+}
+
+.elect-tax-info .toast-body p {
+  color: #373A44;
 }
 
 @media (min-width: 800px) {

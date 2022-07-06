@@ -276,6 +276,14 @@
             }
         }
     }
+
+}
+.elect-tax-info{
+    .toast-body{
+        p{
+            color: $fc-default;
+        }
+    }
 }
 @media (min-width: $breakpoint-pad){
     .register{
