@@ -41,7 +41,7 @@ const fc = {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    for(let item in fc){
-        fc[item]();
-    }
+    // for(let item in fc){
+    //     fc[item]();
+    // }
 })
