@@ -60,8 +60,7 @@ var fc = {
     });
   }
 };
-document.addEventListener("DOMContentLoaded", function () {
-  for (var item in fc) {
-    fc[item]();
-  }
+document.addEventListener("DOMContentLoaded", function () {// for(let item in fc){
+  //     fc[item]();
+  // }
 });

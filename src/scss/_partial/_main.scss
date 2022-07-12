@@ -33,7 +33,7 @@
             img{
                 width: rem(24);
             }
-            &.has-notice{
+            &.has-new{
                 position: relative;
                 &:before{
                     content: '';
@@ -370,7 +370,7 @@
     }
     .total-amount{
         position: relative;
-        &.has-notice{
+        &.has-new{
             position: relative;
             &:before{
                 content: '';
@@ -383,6 +383,16 @@
                 border-radius: 50%;
                 background-color: $notice-red;
             }
+        }
+    }
+}
+@media (min-width: $breakpoint-pad){
+    .main{
+        .container{
+            @include container-pc;
+        }
+        .header{
+            @include container-pc;
         }
     }
 }

@@ -12,6 +12,16 @@
         .input-line{
             border-bottom: 2px solid $bc-focused;
         }
+        &.is-invalid{
+            .input-line{
+                border-bottom: 2px solid $notice-red;
+            }
+        }
+    }
+    &.is-invalid{
+        .input-line{
+            border-bottom: 2px solid $notice-red;
+        }
     }
     .input-border{
         border: 1px solid $bc-input;

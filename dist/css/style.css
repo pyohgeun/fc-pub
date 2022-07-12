@@ -4494,20 +4494,31 @@ input[type=number] {
   justify-content: flex-end;
 }
 
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .dialog-modal {
   position: fixed;
-  display: none;
+  display: inline-block;
   min-height: 12.5rem;
   width: 18.75rem;
   background-color: #ffffff;
   border-radius: 0.625rem;
-  top: 50%;
+  top: 100%;
+  opacity: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1.875rem;
+  transition: all 0.3s;
 }
 .dialog-modal.active {
-  display: inline-block;
+  top: 50%;
+  opacity: 1;
 }
 .dialog-modal .dialog-header {
   font-size: 1.125rem;
@@ -4532,21 +4543,24 @@ input[type=number] {
 }
 
 .toast-modal {
+  display: inline-block;
+  transition: all 0.3s;
   position: fixed;
-  display: none;
   min-height: 12.5rem;
   width: 100%;
   background-color: #ffffff;
   border-top-right-radius: 1.25rem;
   border-top-left-radius: 1.25rem;
-  bottom: 0;
+  bottom: -50vh;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 1.5rem;
   padding-top: 1.875rem;
+  opacity: 0;
 }
 .toast-modal.active {
-  display: inline-block;
+  bottom: 0;
+  opacity: 1;
 }
 .toast-modal .toast-header {
   display: flex;
@@ -4621,6 +4635,14 @@ input[type=number] {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .App {
@@ -5041,6 +5063,18 @@ input[type=number] {
   background-color: #FF7474;
 }
 
+@media (min-width: 800px) {
+  .main .container {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main .header {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .period-select-wrap .toast-modal .toast-body .period-select-topper {
   margin-top: 3.125rem;
 }
@@ -5284,6 +5318,9 @@ input[type=number] {
   position: fixed;
   left: -6.25rem;
   top: -6.25rem;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 .register .container.set-password-6 .dots-group {
   display: block;
@@ -5470,7 +5507,7 @@ input[type=number] {
 .register .register-complete {
   display: flex;
   flex-direction: column;
-  min-height: calc(100% - 4.5rem);
+  min-height: calc(100vh - 4.5rem);
 }
 .register .register-complete > .container {
   display: flex;
@@ -5647,4 +5684,11 @@ input[type=number] {
     margin-left: auto;
     margin-right: auto;
   }
+}
+.input-message {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+.input-message.message-alert {
+  color: #FF7474;
 }

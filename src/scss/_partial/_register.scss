@@ -21,6 +21,9 @@
                 position: fixed;
                 left: rem(-100);
                 top: rem(-100);
+                opacity: 0;
+                width: 0;
+                height: 0;
             }
             .dots-group{
                 display: block;
@@ -208,7 +211,7 @@
     .register-complete{
         display: flex;
         flex-direction: column;
-        min-height: calc(100% - #{$header-height});
+        min-height: calc(100vh - #{$header-height});
         > .container{
             display: flex;
             flex-direction: column;

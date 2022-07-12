@@ -1,20 +1,23 @@
 .toast-modal{
     &.active{
-        display: inline-block;
+        bottom: 0;
+        opacity: 1;
     }
+    display: inline-block;
+    transition: all $fc-easing-duration;
     $toast-pad: rem(24);
     position: fixed;
-    display: none;
     min-height: rem(200);
     width: 100%;
     background-color: #ffffff;
     border-top-right-radius: rem(20);
     border-top-left-radius: rem(20);
-    bottom: 0;
+    bottom: -50vh;
     padding-left: $toast-pad;
     padding-right: $toast-pad;
     padding-bottom: $toast-pad;
     padding-top: rem(30);
+    opacity: 0;
     .toast-header{
         @include prefix-suffix;
         font-size: rem(18);

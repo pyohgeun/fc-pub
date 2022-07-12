@@ -1,0 +1,7 @@
+.input-message{
+    font-size: rem(12);
+    line-height: rem(15);
+    &.message-alert{
+        color: $notice-red; 
+    }
+}

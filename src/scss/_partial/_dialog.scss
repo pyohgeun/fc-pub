@@ -1,18 +1,24 @@
+.modal-wrap{
+    @include fullpage;
+}
 .dialog-modal{
     &.active{
-        display: inline-block;
+        top: 50%;
+        opacity: 1;
     }
     $dialog-pad: rem(30);
     position: fixed;
-    display: none;
+    display: inline-block;
     min-height: rem(200);
     width: rem(300);
     background-color: #ffffff;
     border-radius: rem(10);
-    top: 50%;
+    top: 100%;
+    opacity: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: $dialog-pad;
+    transition: all $fc-easing-duration;
     .dialog-header{
         font-size: rem(18);
         color: $fc-default;
