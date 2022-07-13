@@ -5,6 +5,7 @@
     &.active{
         top: 50%;
         opacity: 1;
+        z-index: 1;
     }
     $dialog-pad: rem(30);
     position: fixed;

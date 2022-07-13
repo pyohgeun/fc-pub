@@ -71,6 +71,7 @@
         .no-result{
             @include fullpage;
             @include metropolis;
+            top: $header-height;
             flex-direction: column;
             .img-wrap{
                 background-color: #ffffff;

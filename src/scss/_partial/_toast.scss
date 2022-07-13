@@ -2,6 +2,7 @@
     &.active{
         bottom: 0;
         opacity: 1;
+        z-index: 1;
     }
     display: inline-block;
     transition: all $fc-easing-duration;
