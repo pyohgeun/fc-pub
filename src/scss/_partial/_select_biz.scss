@@ -1,0 +1,33 @@
+.select-biz{
+    .container{
+        padding-left: $container-pad-bold;
+        padding-right: $container-pad-bold;
+        .input-radio{
+            label{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                height: rem(48);
+            }
+        }
+        .title-main{
+            font-size: rem(20);
+            line-height: rem(28);
+            font-weight: 700;
+            color: $fc-default;
+        }
+        .title-sub{
+            font-size: rem(14);
+            line-height: rem(18);
+            color: $fc-bluegray50;
+        }
+    }
+}
+@media (min-width: $breakpoint-pad){
+    .select-biz{
+        .container{
+            @include container-pc;
+        }
+    }
+}

@@ -55,29 +55,6 @@
         line-height: rem(18);
         color: $fc-bluegray50;
     }
-    .select-biz{
-        .container{
-            padding-left: $container-pad-bold;
-            padding-right: $container-pad-bold;
-            .input-radio{
-                label{
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                    align-items: center;
-                    height: rem(48);
-                }
-            }
-        }
-    }
+    
 }
 
-@media (min-width: $breakpoint-pad){
-    .loading{
-        .select-biz{
-            .container{
-                @include container-pc;
-            }
-        }
-    }
-}
