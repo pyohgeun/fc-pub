@@ -39,7 +39,7 @@
     justify-content: center;
 }
 @mixin container-pc{
-    width: calc($breakpoint-sm*2);
+    width: calc($breakpoint-sm);
     margin-left: auto;
     margin-right: auto;
 }

@@ -72,12 +72,12 @@
 
 @media (min-width: $breakpoint-pad){
     .bottom-fix{
-        width: calc($breakpoint-sm*2);
+        width: calc($breakpoint-sm);
         left: 50%;
         transform: translateX(-50%);
     }
     .bottom-fix-fit{
-        width: calc($breakpoint-sm*2);
+        width: calc($breakpoint-sm);
         left: 50%;
         transform: translateX(-50%);
     }

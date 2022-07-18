@@ -5,7 +5,7 @@ html, body, input, select{
 }
 @media screen and (min-width: $breakpoint-pad) {
     html, body{
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 @media screen and (max-width: $breakpoint-sm) {

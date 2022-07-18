@@ -44,7 +44,7 @@ html, body, input, select {
 
 @media screen and (min-width: 800px) {
   html, body {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -4061,12 +4061,12 @@ html, body, input, select {
 
 @media (min-width: 800px) {
   .bottom-fix {
-    width: 750px;
+    width: 375px;
     left: 50%;
     transform: translateX(-50%);
   }
   .bottom-fix-fit {
-    width: 750px;
+    width: 375px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -5065,12 +5065,12 @@ input[type=number] {
 
 @media (min-width: 800px) {
   .main .container {
-    width: 750px;
+    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
   .main .header {
-    width: 750px;
+    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -5679,8 +5679,8 @@ input[type=number] {
 }
 
 @media (min-width: 800px) {
-  .loading .select-biz .container {
-    width: 750px;
+  .select-biz .container {
+    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
