@@ -4161,6 +4161,12 @@ html, body, input, select {
   background-image: url("../image/icon_notice_taxbill.png");
 }
 
+.icon-select-arrow-topbottom {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("../image/icon_select_arrow_topbottom.png");
+}
+
 .button {
   border: 0;
   background-color: #F0F0F0;
@@ -4278,6 +4284,12 @@ html, body, input, select {
 .input-wrapper.on-focus .input-line {
   border-bottom: 2px solid #6993FF;
 }
+.input-wrapper.on-focus.is-invalid .input-line {
+  border-bottom: 2px solid #FF7474;
+}
+.input-wrapper.is-invalid .input-line {
+  border-bottom: 2px solid #FF7474;
+}
 .input-wrapper .input-border {
   border: 1px solid #BDC2CD;
   height: 2.625rem;
@@ -4294,7 +4306,7 @@ html, body, input, select {
   color: #373A44;
 }
 .input-wrapper .input-border .input-text::placeholder {
-  color: #A2A9BA;
+  color: #C4C4C4;
 }
 .input-wrapper .input-border .input-text:focus {
   outline: none;
@@ -4330,7 +4342,7 @@ html, body, input, select {
   color: #373A44;
 }
 .input-wrapper .input-line .input-text::placeholder {
-  color: #A2A9BA;
+  color: #C4C4C4;
 }
 .input-wrapper .input-line .input-text:focus {
   outline: none;
@@ -4519,6 +4531,7 @@ input[type=number] {
 .dialog-modal.active {
   top: 50%;
   opacity: 1;
+  z-index: 1;
 }
 .dialog-modal .dialog-header {
   font-size: 1.125rem;
@@ -4561,6 +4574,7 @@ input[type=number] {
 .toast-modal.active {
   bottom: 0;
   opacity: 1;
+  z-index: 1;
 }
 .toast-modal .toast-header {
   display: flex;
@@ -4740,10 +4754,10 @@ input[type=number] {
 .main .header .button img {
   width: 1.5rem;
 }
-.main .header .button.has-notice {
+.main .header .button.has-new {
   position: relative;
 }
-.main .header .button.has-notice:before {
+.main .header .button.has-new:before {
   content: "";
   position: absolute;
   right: 0;
@@ -5048,10 +5062,10 @@ input[type=number] {
 .main .total-amount {
   position: relative;
 }
-.main .total-amount.has-notice {
+.main .total-amount.has-new {
   position: relative;
 }
-.main .total-amount.has-notice:before {
+.main .total-amount.has-new:before {
   content: "";
   position: absolute;
   right: -0.5rem;
@@ -5201,6 +5215,7 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 4.5rem;
   flex-direction: column;
 }
 .main-notice .container .no-result .img-wrap {
@@ -5580,7 +5595,7 @@ input[type=number] {
 
 @media (min-width: 800px) {
   .register .container {
-    width: 750px;
+    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -5666,16 +5681,28 @@ input[type=number] {
   line-height: 1.125rem;
   color: #6D768D;
 }
-.loading .select-biz .container {
+
+.select-biz .container {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.loading .select-biz .container .input-radio label {
+.select-biz .container .input-radio label {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+}
+.select-biz .container .title-main {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #373A44;
+}
+.select-biz .container .title-sub {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6D768D;
 }
 
 @media (min-width: 800px) {
@@ -5689,6 +5716,169 @@ input[type=number] {
   font-size: 0.75rem;
   line-height: 0.9375rem;
 }
+.input-message.message-default {
+  color: #A9A9A9;
+}
 .input-message.message-alert {
   color: #FF7474;
+}
+
+.cash-receipt-issue .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+.cash-receipt-issue .container .topper .target-name {
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  color: #A9A9A9;
+}
+.cash-receipt-issue .container .topper .target-cell-number {
+  margin-top: 0.3125rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  color: #373A44;
+}
+.cash-receipt-issue .container .label-request {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #373A44;
+}
+.cash-receipt-issue .container .content .input-wrapper .input-current input {
+  width: 100%;
+  text-align: center;
+  font-size: 1.875rem;
+  color: #373A44;
+}
+.cash-receipt-issue .container .content .input-wrapper .input-current input:focus {
+  outline: none;
+}
+.cash-receipt-issue .container .content .input-wrapper .input-current input::placeholder {
+  font-size: 1.875rem;
+  color: #C4C4C4;
+}
+.cash-receipt-issue .container .content .issue-summary.gray-box {
+  border-radius: 0.3125rem;
+  background-color: #F3F4F6;
+  padding: 1.25rem;
+}
+.cash-receipt-issue .container .content .issue-summary ul li {
+  color: #8C8C8C;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cash-receipt-issue .container .content .issue-summary .current {
+  display: flex;
+  justify-content: space-between;
+}
+.cash-receipt-issue .container .content .select-type {
+  text-align: left;
+}
+.cash-receipt-issue .container .content .select-type .label {
+  color: #6D768D;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+.cash-receipt-issue .container .content .select-type .button {
+  display: inline-block;
+  font-size: 1rem;
+  color: #373A44;
+}
+
+.type-select-wrap .period-select-topper {
+  margin-top: 3.125rem;
+}
+.type-select-wrap .period-select-topper ul li {
+  margin-bottom: 1.875rem;
+}
+.type-select-wrap .period-select-topper ul li:last-child {
+  margin-bottom: 0;
+}
+.type-select-wrap .period-select-topper ul li .description {
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  color: #8C8C8C;
+  margin-bottom: 0.1875rem;
+}
+.type-select-wrap .input-wrapper label {
+  font-size: 0.9375rem;
+  line-height: 1.1875rem;
+  color: #373A44;
+  justify-content: space-between;
+}
+
+@media (min-width: 800px) {
+  .cash-receipt-issue .container {
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.cash-receipt-issue-success .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+.cash-receipt-issue-success .container .topper h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.cash-receipt-issue-success .container .topper .sub-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #A9A9A9;
+}
+.cash-receipt-issue-success .container .content {
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+.cash-receipt-issue-success .container .content ul {
+  width: 100%;
+}
+.cash-receipt-issue-success .container .content ul li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.cash-receipt-issue-success .container .content ul li .label {
+  color: #8C8C8C;
+}
+.cash-receipt-issue-success .container .content ul li .dd {
+  color: #373A44;
+}
+.cash-receipt-issue-success .container .content .total-amount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #156BFF;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  border-top: 1px solid #E5E5E5;
+}
+.cash-receipt-issue-success .container .content .total-amount .label {
+  font-size: 0.875rem;
+}
+.cash-receipt-issue-success .container .content .total-amount .dd {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: 800px) {
+  .cash-receipt-issue-success .container {
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

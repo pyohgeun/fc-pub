@@ -3,25 +3,240 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css?v=06301400">
-    <script type="text/javascript" src="../js/common_ui.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.css?v=06301400"> -->
+    <!-- <script type="text/javascript" src="../js/common_ui.js"></script> -->
 
-    <!-- simple-keyboard -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
     <title>핀큐브</title>
+
+    <style>
+        body, html, ul, ol, li, h1, h2, h3, h4, p {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul, ol, li {
+            list-style-type: none;
+        }
+
+        body, html {
+            overscroll-behavior-y: none;
+            scroll-behavior: smooth;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+        input {
+            border: 0;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+        }
+        html, body, input, select {
+            font-family: "Spoqa Han Sans Neo", "sans-serif";
+            font-size: 16px;
+        }
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 1.875rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            height: 4.5rem;
+            display: flex;
+            position: relative;
+            align-items: center;
+            z-index: 0;
+            justify-content: space-between;
+        }
+        .register .container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .register .container.set-certification .title-main {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.75rem;
+            color: #373A44;
+        }
+        .register .container.set-certification .title-sub {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            color: #8C8C8C;
+            word-break: keep-all;
+        }
+        .register .container.set-certification .partition {
+            border-top: 1px solid #F3F4F6;
+        }
+        .register .container.set-certification .step-info {
+            margin-left: 0.625rem;
+            margin-right: 0.625rem;
+        }
+        .register .container.set-certification .step-info li {
+            position: relative;
+            margin-bottom: 1.875rem;
+        }
+        .register .container.set-certification .step-info li .circle-num {
+            display: inline-flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            background-color: #373A44;
+            border-radius: 50%;
+            font-size: 0.75rem;
+        }
+        .register .container.set-certification .step-info li p {
+            padding-left: 2rem;
+            font-size: 0.875rem;
+            line-height: 1.625rem;
+        }
+        .register .container.set-certification .step-info li p > span {
+            display: block;
+            font-size: 0.75rem;
+            color: #8C8C8C;
+            line-height: 1.125rem;
+        }
+        .register .container.set-certification .auth-number-wrap .title {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #8C8C8C;
+        }
+        .register .container.set-certification .auth-number-wrap .number-plate {
+            display: block;
+            width: 15rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            letter-spacing: -0.00125rem;
+            background-color: #F3F4F6;
+            text-align: center;
+            border-radius: 0.3125rem;
+        }
+        .register .container.set-certification .auth-number-wrap .number-plate.set-number {
+            border: 1px solid #BDC2CD;
+            display: flex;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            align-items: center;
+        }
+        .register .container.set-certification .auth-number-wrap .number-plate.set-number input {
+            flex: 1 1 20%;
+            min-width: 0;
+            text-align: center;
+            background-color: #F3F4F6;
+            font-size: 1rem;
+        }
+        .register .container.set-certification .auth-number-wrap .number-plate.set-number span {
+            display: inline-flex;
+            margin-left: 0.125rem;
+            margin-right: 0.125rem;
+        }
+        .register .container.set-certification .auth-number-wrap .number-plate.focused.set-number {
+            background-color: #EFF4FF;
+        }
+        .register .container.set-certification .auth-number-wrap .number-plate.focused.set-number input {
+            background-color: #EFF4FF;
+        }
+        .register .container.set-certification .img-wrap.how-to-img {
+            width: 17.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .register .container.set-certification .img-wrap.how-to-img img {
+            width: 100%;
+        }
+        .align-c {
+            text-align: center;
+        }
+        .mt-20 {
+            margin-top: 1.25rem;
+        }
+        .mt-16 {
+            margin-top: 1rem;
+        }
+        .pb-30 {
+            padding-bottom: 1.875rem;
+        }
+        .mt-50 {
+            margin-top: 3.125rem;
+        }
+        .button {
+            border: 0;
+            background-color: #F0F0F0;
+            min-height: 3.125rem;
+            font-size: 1rem;
+            border-radius: 0.3125rem;
+            color: #373A44;
+        }
+        .button.button-primary {
+            background-color: #156BFF;
+            color: #ffffff;
+        }
+        .button.button-primary:disabled {
+            background-color: #95bcff;
+        }
+        .button.button-wide {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom-fix {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
+            background-color: #ffffff;
+        }
+        @media (min-width: 800px) {
+            html, body {
+                font-size: 20px;
+            }
+            .register .container {
+                width: 750px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .bottom-fix{
+                width: 800px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="register">
         <header class="header">
             <div class="prefix">
-                <!-- <button class="button button-free btn-nav-prev">
-                    <span class="icon-nav-prev"></span>
-                </button> -->
             </div>
             <div class="suffix">
-                <!-- <button class="button button-free btn-close-pop">
-                    <span class="icon-close-popup-black"></span>
-                </button> -->
             </div>
         </header>
         <div class="container set-certification">
@@ -43,6 +258,9 @@
                     <span>-</span>
                     <input type="number" inputmode="numeric" placeholder="0000">
                 </div>
+            </div>
+            <div class="bottom-fix">
+                <button class="button button-wide button-primary" onclick="">확인</button>
             </div>
         </div>
     </div>

@@ -3,25 +3,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css?v=06301400">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
     <script type="text/javascript" src="../js/common_ui.js"></script>
-
-    <!-- simple-keyboard -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <title>핀큐브</title>
+    <style>
+        body, html, ul, ol, li, h1, h2, h3, h4, p {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul, ol, li {
+            list-style-type: none;
+        }
+
+        body, html {
+            overscroll-behavior-y: none;
+            scroll-behavior: smooth;
+        }
+
+        body * {
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            min-height: 1.875rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            height: 4.5rem;
+            display: flex;
+            position: relative;
+            align-items: center;
+            z-index: 0;
+            justify-content: space-between;
+        }
+        .register .container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .register .container .label-request {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 700;
+            color: #373A44;
+        }
+        .register .container .label-request.align-c {
+            text-align: center;
+        }
+        .register .container .desc {
+            font-size: 0.875rem;
+            color: #A2A9BA;
+        }
+        .register .container.setup-program {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .register .container.setup-program .img-wrap {
+            width: 8.125rem;
+        }
+        .register .container.setup-program .img-wrap img {
+            width: 100%;
+        }
+        .register .container.setup-program .title-main {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.75rem;
+            color: #373A44;
+        }
+        .register .container.setup-program .title-sub {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            color: #8C8C8C;
+            word-break: keep-all;
+        }
+        .button {
+            border: 0;
+            background-color: #F0F0F0;
+            min-height: 3.125rem;
+            font-size: 1rem;
+            border-radius: 0.3125rem;
+            color: #373A44;
+        }
+        .button.button-primary {
+            background-color: #156BFF;
+            color: #ffffff;
+        }
+        .button.button-primary:disabled {
+            background-color: #95bcff;
+        }
+        .button.button-wide {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom-fix {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
+            background-color: #ffffff;
+        }
+        .align-c {
+            text-align: center;
+        }
+        .mt-16 {
+            margin-top: 1rem;
+        }
+        .mt-12 {
+            margin-top: 0.75rem;
+        }
+        @media (min-width: 800px) {
+            html, body {
+                font-size: 20px;
+            }
+            .register .container {
+                width: 750px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .bottom-fix{
+                width: 800px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="register">
         <header class="header">
             <div class="prefix">
-                <!-- <button class="button button-free btn-nav-prev">
-                    <span class="icon-nav-prev"></span>
-                </button> -->
             </div>
             <div class="suffix">
-                <!-- <button class="button button-free btn-close-pop">
-                    <span class="icon-close-popup-black"></span>
-                </button> -->
             </div>
         </header>
         <div class="container setup-program">
@@ -35,9 +166,125 @@
                 <p>고객님의 안전한 서비스 이용을 위해 공인인증서 보안 프로그램을 설치해야 합니다. 아래 버튼을 누르시면 자동으로 설치가 진행됩니다.</p>
             </div>
             <div class="bottom-fix">
-                <button class="button button-wide button-primary">설치하기</button>
+                <button class="button button-wide button-primary" onclick="fnInstallCheck()">설치하기</button>
             </div>
         </div>
     </div>
+
+    <!-- file frame -->
+	<iframe style="display:none" id="ifrFile"></iframe>
+	<!-- file frame -->
+	
+    <!-- plugin: CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
+	<!-- plugins -->
+	<script src="../script/jquery.cookie.js"></script>
+	<script src="../script/jquery.validate.min.js"></script>
+	<script src="../script/detect.min.js"></script>
+	<script src="../script/HoldOn.min.js"></script>
+	
+	<!-- ift plugins -->
+	<script src="../script/ift.cmm.utils.js"></script>
+	<script src="../script/ift.nx.js"></script>
+
+    <script>
+        // <%-- 공인인증서 등록 --%>	
+		// <%-- 프로그램 설치파일 체크 --%>
+		function fnInstallCheck() {
+	
+            // console.log("fnInstallCheck");
+            
+            var defaultVO = new Object();
+            
+            defaultVO.url = '/api/scrap/nx';
+            defaultVO.op = 'setup';
+            defaultVO.nxLogoUrl = '';
+            defaultVO.nxDialogUrl = '';
+            defaultVO.inJson = {};
+            defaultVO.outJson = '';
+
+            fnGetNxData({
+                data: defaultVO
+                , beforeSend: function() {
+                    // 추가부분
+                    nxLoadingMask.show('설치를 확인중입니다.<br />잠시만 기다려주세요.');
+                    
+                }
+                , success: function(nxData) { 					
+                    // 추가부분
+                    nxLoadingMask.hide();					
+                    // 인증서복사
+                    fnCertSend();		
+                }
+                , error: function(errMsg, nxData) { 					
+                    // 추가부분
+                    nxLoadingMask.hide();
+                    
+                    /*alert(nxData);*/
+                    alert(errMsg);
+                    // 설치프로그램 다운로드
+                    const confirmResult = confirm("필수 프로그램을 설치하셔야만 이용이 가능한 서비스입니다.\n[확인]을 선택하셔서 다운로드 및 설치 후 진행해주세요.");
+                    if (confirmResult) {
+                        fnNxDownload();
+                    }					
+                }
+            });
+        }
+
+        function fnNxDownload(url) {
+            
+            $('#ifrFile').attr('src', url ? url : nxExeDownloadUrl);
+            $.fnLog((arguments.callee.name || ''), 'iftNxSetup has downloaded!!!!');
+        }
+
+        // 인증서복사
+        function fnCertSend() {
+            
+            var defaultVO = new Object();
+            defaultVO.url = '/api/scrap/nx';
+            defaultVO.op = 'certP2S';
+            defaultVO.nxLogoUrl = '';
+            defaultVO.uid = '000000000000';
+            defaultVO.nxKeypad = "info";
+                                    
+            fnGetNxCrtData({
+                data: defaultVO
+                , beforeSend: function(vo) {
+                    // 추가부분
+                    nxLoadingMask.show('인증서 복사를 진행중입니다.');
+
+                    return true;
+                }
+                , success: function(nxData) {
+                    // 추가부분
+                    nxLoadingMask.hide();
+                    //console.log(nxData);
+
+                }
+                , error: function(errMsg) {
+                    alert(errMsg);
+                    //console.log(errMsg);
+                    //console.log(nxData);
+                }
+            });
+        };
+
+
+        function userUpdate() {
+            
+            acInfoData.agentId = $(".agentId").val();
+            acInfoData.agentPw = $(".agentPw").val();
+            
+            $.ajax({
+                url: "/api/user/update",
+                data: JSON.stringify(acInfoData),
+                contentType: "application/json",
+                type:'post',
+                success: function(response){
+                    fnInstallCheck();
+                }
+            });
+        }
+    </script>
 </body>
 </html>
