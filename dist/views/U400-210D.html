@@ -35,7 +35,7 @@
             </div>
             <div class="content mt-20">
                 <div class="input-wrapper">
-                    <div class="input-current">
+                    <div class="input-currency">
                         <input type="text" inputmode="numeric" name="id" placeholder="받은 금액 입력" class="input-text" value="">
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                             <span class="dd">과세</span>
                         </li>
                     </ul>
-                    <div class="current">
+                    <div class="currency">
                         <span class="label">받은 금액</span>
                         <span class="amount">0원</span>
                     </div>
@@ -86,7 +86,7 @@
                         <li>
                             <!-- <div class="description">이번 부가세 기간</div> -->
                             <div class="input-wrapper">
-                                <input type="checkbox" class="input-checkbox rear" id="checkType01" value="">
+                                <input type="radio" name="selectUsing" class="input-checkbox rear off-x" id="checkType01" value="0" checked>
                                 <label for="checkType01">
                                     소득공제용
                                 </label>
@@ -95,7 +95,7 @@
                         <li>
                             <!-- <div class="description">지난 부가세 기간</div> -->
                             <div class="input-wrapper">
-                                <input type="checkbox" class="input-checkbox rear" id="checkType02" value="">
+                                <input type="radio" name="selectUsing" class="input-checkbox rear off-x" id="checkType02" value="1">
                                 <label for="checkType02">
                                     지출증빙용
                                 </label>

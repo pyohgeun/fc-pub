@@ -1,0 +1,188 @@
+.tax-bill{
+    .header{
+        @include header-fix;
+    }
+    &.who{
+        .container{
+            min-height: 0;
+            padding-bottom: rem(20);
+
+        }
+    }
+    .container{
+        @include container-height;
+        position: sticky;
+        top: $header-height;
+        padding-left: $container-pad-bold;
+        padding-right: $container-pad-bold;
+        background-color: #ffffff;
+        padding-top: rem(18);
+        .label-request{
+            font-size: rem(20);
+            line-height: rem(28);
+            font-weight: 700;
+            color: $fc-default;
+            &.align-c{
+                text-align: center;
+            }
+        }
+        .desc{
+            font-size: rem(14);
+            color: $fc-bluegray40;
+        }
+    }
+    .corp-list-recent, .corp-list, .corp-search-list{
+        h3{
+            padding-top: rem(10);
+            padding-bottom: rem(10);
+            padding-left: $container-pad-bold;
+            padding-right: $container-pad-bold;
+            font-size: rem(18);
+            line-height: rem(23);
+            color: $fc-default;
+            font-weight: 700;
+        }
+        .corp-item{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: rem(14) $container-pad-bold;
+            gap: rem(6);
+            cursor: pointer;
+            .corp-name{
+                font-size: rem(16);
+                line-height: rem(20);
+                color: $fc-default;
+                letter-spacing: -0.02em;
+            }
+            .owner-name{
+                font-size: rem(13);
+                line-height: rem(16);
+                letter-spacing: -0.02em;
+                color: $fc-gray40;
+            }
+            .tag{
+                font-size: rem(13);
+            }
+            &:active{
+                background-color: $fc-gray20;
+            }
+            &.disabled{
+                background-color: $fc-gray10;
+                .corp-name, .owner-name{
+                    color: $fc-gray40;
+                }
+            }
+            &.new-issue{
+                padding-bottom: rem(20);
+                .corp-name{
+                }
+                &+.button-wrap{
+                    display: none;
+                    padding: rem(12) $container-pad-bold;
+                    &.active{
+                        display: block;
+                    }
+                    .button-round{
+                        border: 1px solid $bluegray20;
+                        border-radius: rem(30);
+                        height: rem(48);
+                        min-height: 0;
+                        padding-left: rem(20);
+                        padding-right: rem(20);
+                    }
+                }
+            }
+        }
+    }
+    .corp-list{
+        &:before{
+            content: '';
+            display: block;
+            margin-left: $container-pad-bold;
+            margin-right: $container-pad-bold;
+            border-top: 1px solid $bluegray10;
+            margin-top: rem(20);
+            padding-bottom: rem(20);
+        }
+    }
+    .tax-bill-complete{
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - #{$header-height});
+        > .container{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+            .title-main{
+                font-size: rem(20);
+                font-weight: 700;
+                line-height: rem(28);
+                color: $fc-default;
+            }
+            .title-sub{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: rem(14);
+                line-height: rem(22);
+                color: $fc-gray50;
+                word-break: keep-all;
+            }
+        }
+        .bottom-area{
+            flex: 1 1 auto;
+            &.bg-gray{
+                background-color: $bg-bluegray5;
+            }
+            &.has-bottom-fix{
+                padding-bottom: rem(110);
+            }
+            .img-wrap{
+                width: rem(292);
+                margin-left: auto;
+                margin-right: auto;
+                img{
+                    width: 100%;
+                }
+            }
+            .function-list{
+                width: rem(260);
+                margin-left: auto;
+                margin-right: auto;
+                ul{
+                    li{
+                        display: flex;
+                        height: rem(40);
+                        align-items: center;
+                        padding-left: rem(14);
+                        margin-bottom: rem(12);
+                        background-color: #ffffff;
+                        border-radius: rem(5);
+                        font-size: rem(15);
+                        line-height: rem(19);
+                        color: $fc-default;
+                        [class*="icon-"]{
+                            margin-right: rem(9);
+                        }
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .bottom-fix{
+                background-color: $bg-bluegray5;
+            }
+        }
+    }
+
+}
+@media (min-width: $breakpoint-pad){
+    .tax-bill{
+        .container, .corp-list-recent, .corp-list, .corp-search-list{
+            @include container-pc;
+        }
+    }
+}

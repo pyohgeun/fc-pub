@@ -31,6 +31,14 @@
         }
         
     }
+    &.button-trans{
+        background-color: transparent;
+        color: $fc-default;
+        &:disabled{
+            color: disabledLighten($fc-default);
+        }
+        
+    }
     &.button-default{
         background-color: $btn-bg-lightgray;
         color: $fc-default;
@@ -100,6 +108,12 @@
         justify-content: space-between;
         .button{
             flex: 0 1 calc(50% - #{rem(3)});
+            &.col-4{
+                flex: 0 1 calc(100% / 3);
+            }
+            &.col-auto{
+                flex-grow: 1;
+            }
         }
     }
 }

@@ -1,9 +1,9 @@
-.cash-receipt-issue{
+.tax-bill-issue{
     .container{
+        @include container-height;
         padding-left: $container-pad;
         padding-right: $container-pad;
         text-align: center;
-        
         .topper{
             .target-name{
                 font-size: rem(13);
@@ -56,7 +56,7 @@
                         margin-bottom: rem(16);
                     }
                 }
-                .currency{
+                .total-amount{
                     display: flex;
                     justify-content: space-between;
                 }
@@ -75,6 +75,94 @@
                 }
             }
         }
+        .recent-list{
+            h3{
+                color: $fc-bluegray50;
+                font-size: rem(12);
+                line-height: rem(15);
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap: rem(10);
+                li{
+
+                }
+            }
+            .tag{
+                display: inline-flex;
+                align-items: center;
+                background-color: $bg-input;
+                height: rem(32);
+                border-radius: rem(20);
+                padding-left: rem(14);
+                padding-right: rem(14);
+                .button{
+                    &.delete{
+                        margin-left: rem(5);
+                    }
+                    &.select{
+                        font-size: rem(14);
+                        color: $fc-default;
+                    }
+                }
+            }
+        }
+        &.confirm{
+            .summary{
+                padding: rem(20);
+                background-color: $bg-bluegray5;
+                border-radius: rem(5);
+                text-align: left;
+                .target-name{
+                    font-size: rem(18);
+                    line-height: rem(23);
+                    color: $fc-default;
+                }
+                .issue-amount{
+                    font-size: rem(24);
+                    line-height: rem(30);
+                    color: $fc-default;
+                    font-weight: 700;
+                }
+                .issue-date{
+                    font-size: rem(13);
+                    line-height: rem(16);
+                    color: $fc-gray40;
+                }
+            }
+        }
+        .detail-info{
+            ul{
+                display: block;
+                width: 100%;
+                padding-top: rem(16);
+                padding-bottom: rem(16);
+                border-bottom: 1px solid $fc-gray20;
+                &:nth-last-of-type(1){
+                    border-bottom: 0;
+                }
+                li{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    font-size: rem(14);
+                    line-height: rem(18);
+                    color: $fc-default;
+                    margin-bottom: rem(14);
+                    &:nth-last-of-type(1){
+                        margin-bottom: 0;
+                    }
+                    .dd{
+                        font-weight: 700;
+                        text-decoration: none;
+                        color:$fc-default;
+                    }
+                }
+            }
+
+        }
+        
     }
 }
 .type-select-wrap{
@@ -106,7 +194,7 @@
     }
 }
 @media (min-width: $breakpoint-pad){
-    .cash-receipt-issue{
+    .tax-bill-issue{
         .container{
             @include container-pc;
         }

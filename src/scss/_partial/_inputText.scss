@@ -24,6 +24,7 @@
         }
     }
     .input-border{
+        position: relative;
         border: 1px solid $bc-input;
         height: rem(42);
         border-radius: rem(5);
@@ -41,6 +42,63 @@
             }
             &:focus{
                 outline: none;
+            }
+        }
+        > .btn-input-reset{
+            position: absolute;
+            display: none;
+            right: rem(16);
+            top: 50%;
+            width: rem(20);
+            height: rem(20);
+            min-height: 0;
+            transform: translateY(-50%);
+            img{
+                width: 100%;
+            }
+        }
+        &.is-value-in{
+            .btn-input-reset{
+                display: inline-block;
+            }
+        }
+    }
+    .input-solid{
+        position: relative;
+        height: rem(52);
+        border-radius: rem(5);
+        overflow: hidden;
+        .input-text{
+            width: 100%;
+            height: 100%;
+            padding: rem(12) rem(10);
+            vertical-align: middle;
+            background-color: $bg-input;
+            font-size: rem(16);
+            color: $fc-default;
+            &::placeholder{
+                color: $fc-input-solid-placeholder;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        > .btn-input-reset{
+            position: absolute;
+            display: none;
+            right: rem(16);
+            top: 50%;
+            width: rem(20);
+            height: rem(20);
+            min-height: 0;
+            transform: translateY(-50%);
+            img{
+                width: 100%;
+            }
+        }
+        &.is-value-in{
+            .btn-input-reset{
+                display: inline-block;
             }
         }
     }

@@ -57,7 +57,7 @@
 
 @media (min-width: $breakpoint-pad){
     .toast-modal{
-        width: calc($breakpoint-sm*2);
+        width: calc($breakpoint-sm);
         left: 50%;
         transform: translateX(-50%);
     }

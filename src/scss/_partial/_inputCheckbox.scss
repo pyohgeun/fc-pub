@@ -45,6 +45,13 @@
                     margin-left: rem(5);
                 }
             }
+            &.off-x{
+                & + label {
+                    &:after{
+                        background-image: none;
+                    }
+                }
+            }
             &:checked + label{
                 &:after{
                     content: '';
@@ -59,6 +66,71 @@
         }
         
     }
-    
+    .input-checkbox-square{
+        position: absolute;
+        left: 0;
+        &.front{
+            & + label{
+                display: flex;
+                align-items: center;
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    width: rem(16);
+                    height: rem(16);
+                    background-image: url(../image/icon_checkbox_square_off.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-right: rem(5);
+                }
+            }
+            &:checked + label{
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    width: rem(16);
+                    height: rem(16);
+                    background-image: url(../image/icon_checkbox_square_on.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        &.rear{
+            & + label{
+                display: flex;
+                align-items: center;
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    width: rem(16);
+                    height: rem(16);
+                    background-image: url(../image/icon_checkbox_square_off.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-left: rem(5);
+                }
+            }
+            &.off-x{
+                & + label {
+                    &:after{
+                        background-image: none;
+                    }
+                }
+            }
+            &:checked + label{
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    width: rem(16);
+                    height: rem(16);
+                    background-image: url(../image/icon_checkbox_square_on.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        
+    }
 
 }

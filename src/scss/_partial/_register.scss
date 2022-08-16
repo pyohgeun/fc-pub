@@ -1,5 +1,6 @@
 .register{
     .container{
+        @include container-height;
         padding-left: $container-pad-bold;
         padding-right: $container-pad-bold;
         .label-request{
@@ -213,6 +214,8 @@
         flex-direction: column;
         min-height: calc(100vh - #{$header-height});
         > .container{
+            min-height: 0;
+            padding-bottom: 0;
             display: flex;
             flex-direction: column;
             padding-left: 0;

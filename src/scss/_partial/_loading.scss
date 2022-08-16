@@ -55,6 +55,10 @@
         line-height: rem(18);
         color: $fc-bluegray50;
     }
-    
+    &.protect{
+        @include fullpage;
+        @include metropolis;
+        z-index: 9;
+    }
 }
 
