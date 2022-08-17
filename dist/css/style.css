@@ -4270,6 +4270,7 @@ html, body, input, select {
 .button.button-fixed {
   display: flex;
   width: 100%;
+  min-height: 3.375rem;
   justify-content: center;
   align-items: center;
   border-radius: 0;

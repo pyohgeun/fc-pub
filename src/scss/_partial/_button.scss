@@ -94,6 +94,7 @@
     &.button-fixed{
         display: flex;
         width: 100%;
+        min-height: rem(54);
         justify-content: center;
         align-items: center;
         border-radius: 0;
