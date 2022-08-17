@@ -41,7 +41,7 @@ em {
   font-style: normal;
 }
 
-html, body, input, select {
+html, body, input, select, button {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-size: 16px;
 }
@@ -4223,6 +4223,7 @@ html, body, input, select {
 .button.button-wide {
   display: flex;
   width: 100%;
+  min-height: 3.375rem;
   justify-content: center;
   align-items: center;
 }
@@ -4285,6 +4286,7 @@ html, body, input, select {
 }
 .button-group.button-flex .button {
   flex: 0 1 calc(50% - 0.1875rem);
+  min-height: 3.125rem;
 }
 .button-group.button-flex .button.col-4 {
   flex: 0 1 33.3333333333%;
